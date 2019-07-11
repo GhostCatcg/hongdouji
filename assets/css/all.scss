@@ -1,0 +1,132 @@
+
+// css全局样式文件
+* {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+  font-size: 15px;
+  font-family: "Helvetica", "Helvetica Neue", "Verdana", "sans-serif", "Arial", "Ubuntu", "PingFang SC",
+    "Microsoft YaHei";
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  touch-action: none;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #000;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+}
+input {
+  border-radius: 0;
+  border: 1px solid #eee;
+  outline: none;
+  -webkit-appearance: none;
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+
+::selection {
+  background-color: #333;
+  color: #fff;
+}
