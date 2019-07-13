@@ -10,7 +10,7 @@
         <nuxt />
       </el-main>
 
-      <el-footer>
+      <el-footer class="footer">
         <h-footer></h-footer>
       </el-footer>
 
@@ -27,7 +27,10 @@ export default {
   }
 }
 </script>
-
 <style>
 
+.footer{
+  height: 125px;
+  margin-bottom:-125px;
+}
 </style>

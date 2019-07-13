@@ -11,7 +11,7 @@
 
     img{
         width: 60%;
-        margin:6rem 0;
+        margin:7rem 0;
     }
 }
 

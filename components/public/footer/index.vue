@@ -17,6 +17,9 @@
 
 /* 脚步区域 */
 footer{
+    width: 100%;
+    height:125px;
+    margin-bottom:-125px;
     background-color: #181818;
     text-align: center;
     color:#6D6D6D;

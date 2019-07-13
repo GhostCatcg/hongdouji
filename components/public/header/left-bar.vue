@@ -9,8 +9,12 @@
 
 <style scoped lang="scss">
 .h-lb {
+  
   img {
     vertical-align: middle;
+    width: 30px;
+    position:relative;
+    top:-2px;
   }
 }
 </style>

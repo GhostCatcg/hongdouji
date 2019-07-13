@@ -18,6 +18,7 @@
 
     .H-index{
         line-height: 4rem;
+        height:4rem;
         background-color: #fff;
     }
 
