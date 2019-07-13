@@ -1,5 +1,5 @@
 <template>
-    <div class="I-index">
+    <div class="H-index">
         <el-row>
             <el-col :span="12" align="center">
                 <left-bar></left-bar>
@@ -12,6 +12,17 @@
         </el-row>
     </div>
 </template>
+
+
+<style lang="scss" scoped>
+
+    .H-index{
+        line-height: 4rem;
+        background-color: #fff;
+    }
+
+</style>
+
 
 <script>
 import leftBar from './left-bar'

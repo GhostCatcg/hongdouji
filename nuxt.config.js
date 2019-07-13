@@ -24,7 +24,8 @@ module.exports = {
   */
   css: [
     'element-ui/lib/theme-chalk/index.css',
-    '@/assets/css/all.scss',
+    '@/assets/css/base.scss',  // 全局的基础样式
+    '@/assets/css/varibale.scss', // 全局的颜色配置
   ],
   /*
   ** Plugins to load before mounting the App

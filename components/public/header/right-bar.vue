@@ -1,7 +1,7 @@
 <template>
   <div class="h-rb">
     <el-row>
-      <el-col :span="4" align="center">
+      <el-col :span="4" align="center" :class="active">
           <nuxt-link to="/">首页</nuxt-link>
       </el-col>
       <el-col :span="4" align="center">
@@ -17,11 +17,25 @@
   </div>
 </template>
 
+<style lang="scss" scoped>
 
+    .h-rb .active{
+        color:#ff5387;
+    }
+
+</style>
 
 
 
 <script>
-export default {};
+export default {
+
+
+    data(){
+        return {
+            active:"active"
+        }
+    }
+};
 </script>
 
