@@ -1,7 +1,25 @@
 // css全局样式文件
+
+// 字体图标
+@font-face {
+  font-family: "iconfont";
+  src: url("../font/iconfont.eot");
+  src: url("../font/iconfont.eot?#iefix") format("embedded-opentype"), url("../font/iconfont.woff2") format("woff2"),
+    url("../font/iconfont.woff") format("woff"), url("../font/iconfont.ttf") format("truetype"),
+    url("../font/iconfont.svg#iconfont") format("svg");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 * {
   box-sizing: border-box;
 }
+
 html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -107,7 +125,7 @@ video {
   font-weight: 400;
   font-size: 16px;
   font-family: inherit;
-  color:#777;
+  color: #777;
 }
 
 button {
@@ -138,10 +156,9 @@ a {
 // 去除默认样式
 .el-main,
 .el-footer,
-.el-header{
-  padding:0;
+.el-header {
+  padding: 0;
 }
-
 
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
 ::-webkit-scrollbar {
@@ -167,4 +184,3 @@ a {
   -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 0, 0.4);
 }
-

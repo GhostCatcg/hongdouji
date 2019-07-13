@@ -21,10 +21,7 @@ footer{
     text-align: center;
     color:#6D6D6D;
     padding:20px 0;
-    
-    div{
-        margin-bottom: 10px;
-    }
+
     .state span{
         cursor: pointer;
     }
@@ -39,6 +36,9 @@ footer{
     .baicon{
         width: 20px;
         vertical-align: sub;
+    }
+    p{
+        margin-bottom:.4rem;
     }
 }
 

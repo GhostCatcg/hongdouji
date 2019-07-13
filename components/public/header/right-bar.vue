@@ -1,7 +1,7 @@
 <template>
   <div class="h-rb">
     <el-row>
-      <el-col :span="4" align="center" :class="active">
+      <el-col :offset="2" :span="4" align="center" :class="active">
           <nuxt-link to="/">首页</nuxt-link>
       </el-col>
       <el-col :span="4" align="center">
