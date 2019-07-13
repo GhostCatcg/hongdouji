@@ -3,7 +3,7 @@
     <el-container>
 
       <el-header>
-        我是头部
+        <h-header></h-header>
       </el-header>
 
       <el-main>
@@ -11,12 +11,22 @@
       </el-main>
 
       <el-footer>
-        我是脚步
+        <h-footer></h-footer>
       </el-footer>
 
     </el-container>
   </div>
 </template>
+<script>
+import HHeader from '../components/public/header/index.vue'
+import HFooter from '../components/public/footer/index.vue'
+export default {
+  components:{
+    HHeader,
+    HFooter
+  }
+}
+</script>
 
 <style>
 
