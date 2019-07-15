@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <el-container>
-
-      <el-header>
+  <div class="default">
+    <el-container class="container">
+      <el-header class="header">
         <h-header></h-header>
       </el-header>
 
@@ -13,24 +12,33 @@
       <el-footer class="footer">
         <h-footer></h-footer>
       </el-footer>
-
     </el-container>
   </div>
 </template>
 <script>
-import HHeader from '../components/public/header/index.vue'
-import HFooter from '../components/public/footer/index.vue'
+import HHeader from "../components/public/header/index.vue";
+import HFooter from "../components/public/footer/index.vue";
 export default {
-  components:{
+  components: {
     HHeader,
     HFooter
   }
-}
+};
 </script>
 <style>
-
-.footer{
+.default,
+.container {
+  height: 100%;
+}
+.push,
+.footer {
   height: 125px;
-  margin-bottom:-125px;
+  /* position: relative;
+  bottom:0; */
+}
+.main {
+  /* min-height: calc(100vh - 185px); */
+  min-height: 100%;
+  margin-bottom: -125px;
 }
 </style>
