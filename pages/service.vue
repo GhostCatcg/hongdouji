@@ -56,9 +56,33 @@ export default {};
 @import "../assets/css/varibale"; // 引入全局样式
 
 .content {
-  background-color: $color;
+  // background-color: $color;
+  background: linear-gradient(to right, #ff5589, #ff77a0);
   padding-top: 3rem;
-  height:100%;
+  height: 100%;
+  position:relative;
+  &::after,
+  &::before {
+    content:"";
+    display: inline-block;
+    background: url("../assets/img/ellipse.png") no-repeat;
+    background-size: 100% 100%;
+    width: 15em;
+    height: 15em;
+    position:absolute;
+  }
+  &::after{
+    background-position: 6em 4em;
+    bottom:0em;
+    right:0em;
+    width: 20em;
+    height: 20em;
+  }
+  &::before{
+    background-position: -4em -2em;
+    top:0em;
+    left:0em;
+  }
   .title {
     color: #fff;
     font-size: 2rem;
@@ -71,7 +95,8 @@ export default {};
     margin: 0 auto 6rem;
     background-color: #fff;
     padding: 2.5rem 5rem;
-    box-shadow: 0px 0px 10px 2px #bbb;
+    // box-shadow: 0px 0px 10px 2px #bbb;
+    // box-shadow: 0px 0px 10px 2px #bbb;
     .m-title {
       text-align: center;
       font-size: 1.5rem;
@@ -153,7 +178,7 @@ export default {};
       text-align: center;
       margin: 2em auto;
       span {
-        padding:.5em 3.5em;
+        padding: 0.5em 3.5em;
         background-color: $color;
         color: #fff;
         font-size: 1.2em;

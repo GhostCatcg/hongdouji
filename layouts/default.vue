@@ -33,8 +33,6 @@ export default {
 .push,
 .footer {
   height: 125px;
-  /* position: relative;
-  bottom:0; */
 }
 .main {
   /* min-height: calc(100vh - 185px); */
