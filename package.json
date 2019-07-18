@@ -12,8 +12,10 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "koa": "^2.6.2",
     "element-ui": "^2.4.11",
+    "koa": "^2.6.2",
+    "koa-multer": "^1.0.2",
+    "koa-router": "^7.4.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {

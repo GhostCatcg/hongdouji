@@ -8,14 +8,18 @@
           <div>
             <span class="left">选择平台：</span>
             <div class="platform">
-              <span class="active">安卓手机</span>
-              <span>苹果手机</span>
+              <input type="radio" checked v-model="field.type" value="0" name="phone" id="androld" />
+              <label class="active" for="androld">安卓手机</label>
+
+              <input type="radio" v-model="field.type" value="1" name="phone" id="ios" />
+              <label for="ios">苹果手机</label>
             </div>
           </div>
           <div>
             <label class="left">反馈内容：</label>
             <div>
               <textarea
+                v-model="suggest"
                 name
                 id
                 placeholder="1、请详细描述您遇到的问题。
@@ -28,19 +32,19 @@
             <span class="left">上传截图：</span>
             <div class="seimg">
               <label for="imgfile">选择图片</label>
-              <input type="file" id="imgfile" />
+              <input type="file" @change="uploadImg($event,'HF')" id="imgfile" />
               <span>不超过2M</span>
             </div>
           </div>
           <div>
             <label class="left" for>联系方式：</label>
             <div class="phone">
-              <input type="text" placeholder="您的手机号或者QQ号" />
+              <input v-model="number" type="text" placeholder="您的手机号或者QQ号" />
               <span class="mark">仅豆印工作人员可见，请保持你的联系方式畅通。</span>
             </div>
           </div>
           <p class="submit">
-            <span>提交</span>
+            <span @click="submitForm">提交</span>
           </p>
         </div>
       </div>
@@ -49,7 +53,51 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      suggest: "", //建议
+      number: "", // 联系方式
+      field: {
+        type: "0"
+      }
+    };
+  },
+  methods: {
+    // 切换安卓/苹果
+    toggle() {},
+    // 发送
+    submitForm() {
+      console.log("test");
+      var formData = {
+        suggest: this.suggest,
+        number: this.number,
+        phoneType: this.field.type
+      };
+      console.log(formData);
+    },
+    uploadImg: (e, type) => {
+      let file = e.target.files[0];
+      console.log(file);
+      if (!/\.(gif|jpg|jpeg|png|GIF|JPG|PNG|JPEG)$/.test(file.name)) {
+        this.alert(this.l.ST_TEXT5);
+        return;
+      }
+      let param = new FormData(); //创建form对象
+      param.append("file", file); //通过append向form对象添加数据
+      console.log(param, param.get("file"));
+
+      axios
+        .post("http://localhost:3000/upload", param)
+        .then(function(response) {
+          console.log(response);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -60,28 +108,28 @@ export default {};
   background: linear-gradient(to right, #ff5589, #ff77a0);
   padding-top: 3rem;
   height: 100%;
-  position:relative;
+  position: relative;
   &::after,
   &::before {
-    content:"";
+    content: "";
     display: inline-block;
     background: url("../assets/img/ellipse.png") no-repeat;
     background-size: 100% 100%;
     width: 15em;
     height: 15em;
-    position:absolute;
+    position: absolute;
   }
-  &::after{
+  &::after {
     background-position: 6em 4em;
-    bottom:0em;
-    right:0em;
+    bottom: 0em;
+    right: 0em;
     width: 20em;
     height: 20em;
   }
-  &::before{
+  &::before {
     background-position: -4em -2em;
-    top:0em;
-    left:0em;
+    top: 0em;
+    left: 0em;
   }
   .title {
     color: #fff;
@@ -158,7 +206,10 @@ export default {};
       }
     }
     .platform {
-      span {
+      input {
+        display: none;
+      }
+      label {
         display: inline-block;
         padding: 0.3em 1em;
         text-align: center;
@@ -167,11 +218,11 @@ export default {};
         border: 1px solid $color;
         margin-right: 1em;
         cursor: pointer;
+      }
 
-        &.active {
-          background-color: $color;
-          color: #fff;
-        }
+      input:checked + label {
+        background-color: $color;
+        color: #fff;
       }
     }
     .submit {

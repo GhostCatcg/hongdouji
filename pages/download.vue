@@ -116,7 +116,7 @@
         width: 12em;
         height: 12em;
         position: absolute;
-        left: -60%;
+        left: -40%;
         top: 25%;
       }
   }

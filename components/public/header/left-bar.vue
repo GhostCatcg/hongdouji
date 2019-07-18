@@ -2,7 +2,7 @@
   <div class="h-lb">
     <nuxt-link to="/">
       <img src="@/assets/img/logo.png" alt />
-      <span>豆印有限公司</span>
+      <span>红豆记</span>
     </nuxt-link>
   </div>
 </template>
