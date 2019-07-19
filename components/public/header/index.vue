@@ -1,11 +1,11 @@
 <template>
     <div class="H-index">
         <el-row>
-            <el-col :span="12" align="center">
+            <el-col :span="8" align="center">
                 <left-bar></left-bar>
             </el-col>
             
-            <el-col :span="12" align="center">
+            <el-col :span="12" :offset="4" align="center">
                 <right-bar></right-bar>
             </el-col>
 

@@ -8,7 +8,14 @@
           <div>
             <span class="left">选择平台：</span>
             <div class="platform">
-              <input type="radio" checked v-model="platform.type" value="0" name="phone" id="androld" />
+              <input
+                type="radio"
+                checked
+                v-model="platform.type"
+                value="0"
+                name="phone"
+                id="androld"
+              />
               <label class="active" for="androld">安卓手机</label>
 
               <input type="radio" v-model="platform.type" value="1" name="phone" id="ios" />
@@ -53,50 +60,55 @@
 </template>
 
 <script>
-// 测试提交呀 github啊啊测试测试测试
-import axios from "axios"
+import axios from "axios";
 export default {
   data() {
     return {
       suggest: "", //建议
       number: "", // 联系方式
-      platform: { 
+      platform: {
         type: "0" // 0安卓 1苹果
       },
-      images:''
+      images: ""
     };
   },
   methods: {
     // 发送数据
-    submitForm () {
-      var formData = {
+    submitForm() {
+      var jsonData = {
         suggest: this.suggest,
         number: this.number,
-        phoneType: this.platform.type,
-        images: this.images
+        phone: this.platform.type
       };
-      console.log(formData);
-
+      this.send(jsonData);
     },
-    uploadImg (e, type) {
-      let file = e.target.files[0];
-      console.log(file);
-      if (!/\.(gif|jpg|jpeg|png|GIF|JPG|PNG|JPEG)$/.test(file.name)) {
-        this.alert(this.l.ST_TEXT5)
+    async send(data) {
+      console.log("发送请求");
+      let imgRes = await axios.post(
+        "http://localhost:3000/upload/img",
+        this.images
+      );
+
+      if (imgRes.status !== 200) {
+        alert("上传失败！");
         return;
       }
-      let param = new FormData(); //创建form对象
-      param.append("file", file); //通过append向form对象添加数据
-      // console.log(param, param.get("file"));
-      this.images = param
-      // axios
-      //   .post("http://localhost:3000/upload", param)
-      //   .then(function(response) {
-      //     console.log(response);
-      //   })
-      //   .catch(function(error) {
-      //     console.log(error);
-      //   });
+      let jsonRes = await axios.post("http://localhost:3000/upload/json", data);
+      if (imgRes.status !== 200) {
+        alert("上传失败!");
+        return;
+      }
+      alert("上传成功！");
+    },
+
+    uploadImg(e, type) {
+      let file = e.target.files[0];
+      if (!/\.(gif|jpg|jpeg|png|GIF|JPG|PNG|JPEG)$/.test(file.name)) {
+        this.alert(this.l.ST_TEXT5);
+        return;
+      }
+      this.images = new FormData(); //创建form对象
+      this.images.append("file", file); //通过append向form对象添加数据
     }
   }
 };
@@ -104,11 +116,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/css/varibale"; // 引入全局样式
-// 好多错误啊
-.content{
-  margin:10em auto;
+.content {
+  margin: 10em auto;
   height: 1000px;
 }
+
 // .content {
 //   background: linear-gradient(to right, #ff5589, #ff77a0);
 //   padding-top: 3rem;

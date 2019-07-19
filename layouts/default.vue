@@ -35,7 +35,6 @@ export default {
   height: 125px;
 }
 .main {
-  /* min-height: calc(100vh - 185px); */
   min-height: 100%;
   margin-bottom: -125px;
 }
