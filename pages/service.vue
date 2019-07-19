@@ -87,7 +87,6 @@ export default {
       let param = new FormData(); //创建form对象
       param.append("file", file); //通过append向form对象添加数据
       // console.log(param, param.get("file"));
-      // console.log(this)
       this.images = param
       // axios
       //   .post("http://localhost:3000/upload", param)
