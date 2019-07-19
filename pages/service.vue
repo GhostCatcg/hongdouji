@@ -104,7 +104,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/css/varibale"; // 引入全局样式
-
+// 好多错误啊
 .content{
   margin:10em auto;
   height: 1000px;
