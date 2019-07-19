@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nuxtJS + koa2 + ssr + vue美团项目</title>
+</head>
+<body>
+    
+    <h1>项目安装</h1>
+    <h2>1. npm install -g npx</h2>
+    <h2>2. npx create-nuxt-app project-name</h2>
+    <h3>3. npm install --update-binary 重新编译一下，防止出错</h3>
+
+    <h1>使用脚手架创建项目的一些常见错误</h1>
+    <ul>
+        <li><h2>在项目中使用import XX from XX 报错解决方法</h2></li>
+        <li>在package.json里面 -> scripts 下 dev开发环境和start线上环境  最后添加</li>
+        <li>--exec babel-node</li>
+        <li>使用node 加 babel启动项目</li>
+        <li>安装babel： npm install --save-dev babel-cli</li>
+        <li><br></li>
+        <li>创建babel配置文件</li>
+        <li>在项目文件中创建 .babelrc 文件</li>
+        <li>写入：</li>
+        <li>
+            {
+                "presets":["es2015"]
+            }
+        </li>
+        <li>安装这个插件</li>
+        <li>npm install babel-preset-es2015</li>
+    </ul>
+    <br>
+    <ul>
+        <li><h2>使用scss</h2></li>
+        <li>npm install sass-loader node-sass</li>
+    </ul>
+
+    <br>
+    <ul>
+        <li><h2>pages</h2></li>
+        <li>下面文件夹直接就是路由</li>
+    </ul>
+
+    <br>
+    <br>
+    <ul>
+        <li><h2>git的使用</h2></li>
+        <li><h1>首先自保家门</h1></li>
+        <li>git config --global user.name "your name"</li>
+        <li>git config --global user.email "your email"</li>
+        <li>创建github仓库</li>
+        <li>把github上面的仓库克隆到本地</li>
+        <li>git clone https://github.com/xxxxx</li>
+        <li>学习笔记<a href="https://www.cnblogs.com/jackchensir/p/8306448.html"></a></li>
+        <li>## 1 检查gitignore文件中的配置 node_modules  .idea /dist/ 
+            ## 2 生成本地仓库
+            ##   - git init
+            ##   - git *
+            ##   - git commit -m "init gshop"
+            ## 3 在GitHub创建远程仓库
+            ##   - 复制 git remote add origin https:----
+            ## 4 - 在webstorm中提交 git remote add origin https:---- 先关联
+            ##   - 再推送 
+            ##         - git push origin master</li>
+
+
+            <h1>11111111</h1>
+            <h1>22222222</h1>
+    </ul>
+</body>
+</html>
+

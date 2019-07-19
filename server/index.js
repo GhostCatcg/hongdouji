@@ -1,22 +1,32 @@
 const Koa = require('koa')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
+const router = require("koa-router")()// 导入路由中间间
+const bodyParser = require('koa-bodyparser')// 接收post请求处理参数
 
-const router = require("koa-router")()
+const service = require("./service")// 导入客服接口
 
-const bodyParser = require('koa-bodyparser')
 
-// 导入客服路由
-const service = require("./service")
+import mongoose from 'mongoose' // 导入mongoose
+import dbConfig from "../dbs/config" // 导入mongoose配置
 
 
 const app = new Koa()
 
-app.use(bodyParser())
+app.use(bodyParser()) // 注入post解析参数
+app.use(service.routes(),service.allowedMethods())// 注入路由
 
-// 注入路由
-// console.log(service)
-app.use(service.routes(),service.allowedMethods())
+mongoose.connect(dbConfig.dbs,{
+  useNewUrlParser:true // 写死就行，不知道啥意思
+}) // 连接数据库
+
+
+
+
+
+
+
+
 
 
 
