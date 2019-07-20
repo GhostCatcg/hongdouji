@@ -9,6 +9,8 @@
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js --exec babel-node",
     "generate": "nuxt generate"
+
+
   },
   "dependencies": {
     "axios": "^0.19.0",
