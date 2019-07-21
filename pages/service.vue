@@ -85,7 +85,7 @@ export default {
     async send(data) {
       // console.log("发送请求");
       let imgRes = await axios.post(
-        "http://localhost:3000/upload/img",
+        "http://0.0.0.0/upload/img",
         this.images
       );
 
@@ -93,7 +93,7 @@ export default {
         alert("上传失败！");
         return;
       }
-      let jsonRes = await axios.post("http://localhost:3000/upload/json", data);
+      let jsonRes = await axios.post("http://0.0.0.0/upload/json", data);
       // console.log(jsonRes)
       if (imgRes.status !== 200) {
         alert("上传失败!");

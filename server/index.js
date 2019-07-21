@@ -14,10 +14,10 @@ import dbConfig from "../dbs/config" // 导入mongoose配置
 const app = new Koa()
 
 app.use(bodyParser()) // 注入post解析参数
-app.use(service.routes(),service.allowedMethods())// 注入路由
+app.use(service.routes(), service.allowedMethods())// 注入路由
 
-mongoose.connect(dbConfig.dbs,{
-  useNewUrlParser:true // 写死就行，不知道啥意思
+mongoose.connect(dbConfig.dbs, {
+  useNewUrlParser: true // 写死就行，不知道啥意思
 }) // 连接数据库
 
 
@@ -44,6 +44,8 @@ async function start() {
     port = process.env.PORT || 3000
   } = nuxt.options.server
 
+
+
   // Build in development
   if (config.dev) {
     const builder = new Builder(nuxt)
@@ -59,7 +61,11 @@ async function start() {
     nuxt.render(ctx.req, ctx.res)
   })
 
-  app.listen(port, host)
+
+  // app.listen(port, host)
+  // 暂时没有解决办法的设置host和port   服务器上使用这套
+  app.listen(80, "0.0.0.0")
+
   consola.ready({
     message: `Server listening on http://${host}:${port}`,
     badge: true

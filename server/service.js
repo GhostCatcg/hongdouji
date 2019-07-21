@@ -45,6 +45,7 @@ router.post('/upload/img', upload.single('file'), async (ctx, next) => {
 
 
 router.post("/upload/json", async (ctx, next) => {
+    console.log("外部访问json接口")
     let postParam = ctx.request.body
     postParam.imgUrl = imgUrl
     const service = new Service({
