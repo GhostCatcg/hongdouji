@@ -2,7 +2,12 @@
   <div class="footer">
     <footer>
       <!-- https://blog.csdn.net/Fabulous1111/article/details/79651832 -->
-      <p>豆印有限公司 版权所有</p>
+      <p>
+        <span>豆印有限公司</span>
+        <span>版权所有</span>
+        <nuxt-link to="/terms">注册协议</nuxt-link>
+        <nuxt-link to="/privacy">隐私协议</nuxt-link>
+      </p>
       <p>公司地址：浙江省杭州市江干区下沙万亚金沙湖1号2幢1301室</p>
       <div class="ba">
         <img class="baicon" src="@/assets/img/beianico.png" alt />
