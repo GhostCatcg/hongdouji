@@ -4,7 +4,7 @@
 
 [下载 MongoDB](https://www.mongodb.com/download-center#community)
 
-[linux安装mongodb](https://www.cnblogs.com/Lovebugs/p/8606000.html)
+[linux安装mongodb4.X](https://blog.csdn.net/ysk_xh_521/article/details/83275101)
 
 [下载 Robo 3T](https://studio3t.com/download-now/)
 
