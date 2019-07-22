@@ -1,5 +1,3 @@
 
 
-
-
- pm2 start ./nuxt --name "hongdouji"
+pm2 start npm --name "hongdouyin" -- run start -i max  启动
