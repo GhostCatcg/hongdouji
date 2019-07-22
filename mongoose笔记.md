@@ -4,6 +4,8 @@
 
 [下载 MongoDB](https://www.mongodb.com/download-center#community)
 
+[linux安装mongodb](https://www.cnblogs.com/Lovebugs/p/8606000.html)
+
 [下载 Robo 3T](https://studio3t.com/download-now/)
 
 [MongooseJS中文文档](https://xiaoxiami.gitbook.io/mongoose/guide)
