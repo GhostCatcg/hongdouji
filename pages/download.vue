@@ -11,7 +11,7 @@
           </div>
           <div>
             <i class="iconfont">&#xe634;</i>
-            <p>Iphone</p>
+            <p>iPhone</p>
           </div>
         </div>
         <p class="smllMark">感谢您对豆印的支持，敬请期待更多产品。</p>
@@ -25,18 +25,20 @@
 
 <style lang="scss" scoped>
 @import "../assets/css/varibale"; // 引入全局样式
-
+.download{
+  height: 100%;
+}
 .content {
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(to right, #ff5589, #ff77a0);
   padding: 3em 0;
-
+  height:100%;
   position: relative;
   &::after,
   &::before {
-    content: "";
+    content: " ";
     display: inline-block;
     background: url("../assets/img/ellipse.png") no-repeat;
     background-size: 100% 100%;

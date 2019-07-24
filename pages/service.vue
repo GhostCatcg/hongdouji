@@ -30,7 +30,7 @@
                 name
                 id
                 placeholder="1、请详细描述您遇到的问题。
-2、金量上传出现问题时的截图。
+2、尽量上传出现问题时的截图。
 3、请留下您的真是姓名和联系方式，以便豆印客服联系您。"
               ></textarea>
             </div>
@@ -47,7 +47,7 @@
             <label class="left" for>联系方式：</label>
             <div class="phone">
               <input v-model="number" type="text" placeholder="您的手机号或者QQ号" />
-              <span class="mark">仅豆印工作人员可见，请保持你的联系方式畅通。</span>
+              <span class="mark">仅豆印工作人员可见，请保持您的联系方式畅通。</span>
             </div>
           </div>
           <p class="submit">
@@ -121,7 +121,9 @@ export default {
 //   margin: 10em auto;
 //   height: 1000px;
 // }
-
+.service{
+  height:100%;
+}
 .content {
   background: linear-gradient(to right, #ff5589, #ff77a0);
   padding-top: 3rem;

@@ -17,7 +17,7 @@
 
         <nuxt-link to>
           <i class="iconfont">&#xe634;</i>
-          <span>Iphone</span>
+          <span>iPhone</span>
         </nuxt-link>
 
         <nuxt-link to>
@@ -45,7 +45,7 @@ span {
   color: #fff;
 }
 .I-top {
-  background: url("../../assets/img/homeBG.png") no-repeat;
+  background: url("../../assets/img/home.jpg") no-repeat;
   background-size: 100% 100%;
   height: 30rem;
   position: relative;
@@ -62,6 +62,13 @@ span {
   }
   .msg p {
     font-size: 1.8rem;
+  }
+  .big-title p,
+  .msg p {
+    color: $color;
+    text-shadow: 2px 2px 5px #fff, 2px 2px 5px #ffe, 2px 2px 5px #fff,
+      2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff,
+      2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff;
   }
   .different {
     margin-top: 4rem;

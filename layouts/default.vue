@@ -1,20 +1,23 @@
 <template>
   <div class="default">
     <el-container class="container">
+
       <el-header class="header">
         <h-header></h-header>
       </el-header>
 
-      <el-main>
+      <el-main class="mian">
         <nuxt />
       </el-main>
 
-      <el-footer class="footer">
+      <el-footer class="footer" :height="125">
         <h-footer></h-footer>
       </el-footer>
+
     </el-container>
   </div>
 </template>
+
 <script>
 import HHeader from "../components/public/header/index.vue";
 import HFooter from "../components/public/footer/index.vue";
@@ -25,17 +28,21 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss" scoped>
 .default,
 .container {
   height: 100%;
+}
+.header{
+
 }
 .push,
 .footer {
   height: 125px;
 }
 .main {
-  min-height: 100%;
-  margin-bottom: -125px;
+  // min-height: 100%;
+  height:100%;
+  /* margin-bottom: -125px; */
 }
 </style>
