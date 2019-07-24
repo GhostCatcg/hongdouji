@@ -2,13 +2,15 @@
   <div class="footer">
     <footer>
       <!-- https://blog.csdn.net/Fabulous1111/article/details/79651832 -->
+      <div class="footer-top">
+        <nuxt-link to="/terms">注册协议</nuxt-link>
+        <nuxt-link to="/privacy">隐私协议</nuxt-link>
+      </div>
       <p>
         <span>豆印有限公司</span>
         <span>版权所有</span>
-        <nuxt-link to="/terms">注册协议</nuxt-link>
-        <nuxt-link to="/privacy">隐私协议</nuxt-link>
       </p>
-      <p>公司地址：浙江省杭州市江干区下沙万亚金沙湖1号2幢1301室</p>
+      <p>公司地址：浙江省杭州市江干区下沙万亚金沙湖1号2幢1301室 电话：(0571) 8697 2071</p>
       <div class="ba">
         <img class="baicon" src="@/assets/img/beianico.png" alt />
         <span>浙公网安备 33011802001708号</span>
@@ -28,7 +30,7 @@ footer {
   text-align: center;
   color: #6d6d6d;
   padding: 20px 0;
-
+  position: relative;
   .state span {
     cursor: pointer;
   }
@@ -46,6 +48,16 @@ footer {
   }
   p {
     margin-bottom: 0.4rem;
+  }
+  .footer-top{
+    position:absolute;
+    top:-35px;
+    left:50%;
+    transform: translateX(-50%);
+    a{
+      margin:0 8em;
+      font-size: 1.1em;
+    }
   }
 }
 </style>

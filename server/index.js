@@ -64,7 +64,7 @@ async function start() {
 
   // app.listen(port, host)
   // 暂时没有解决办法的设置host和port   服务器上使用这套
-  app.listen(80, "0.0.0.0")
+  app.listen(800, "0.0.0.0")
 
   consola.ready({
     message: `Server listening on http://${host}:${port}`,

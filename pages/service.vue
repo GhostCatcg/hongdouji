@@ -6,7 +6,7 @@
         <p class="m-title">留言客服</p>
         <div class="from">
           <div>
-            <span class="left">选择平台：</span>
+            <span class="left">选择系统：</span>
             <div class="platform">
               <input
                 type="radio"
@@ -16,10 +16,10 @@
                 name="phone"
                 id="androld"
               />
-              <label class="active" for="androld">安卓手机</label>
+              <label class="active" for="androld">安卓系统</label>
 
               <input type="radio" v-model="platform.type" value="1" name="phone" id="ios" />
-              <label for="ios">苹果手机</label>
+              <label for="ios">苹果系统</label>
             </div>
           </div>
           <div>

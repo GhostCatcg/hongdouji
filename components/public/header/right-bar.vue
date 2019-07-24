@@ -5,10 +5,10 @@
         <nuxt-link to="/" active-class="active">首页</nuxt-link>
       </el-col>
       <el-col :span="4" align="center">
-        <nuxt-link to="/about" active-class="active">关于</nuxt-link>
+        <nuxt-link to="/about" active-class="active">关于我们</nuxt-link>
       </el-col>
       <el-col :span="4" align="center">
-        <nuxt-link to="/service" active-class="active">客服</nuxt-link>
+        <nuxt-link to="/service" active-class="active">意见反馈</nuxt-link>
       </el-col>
       <el-col :span="4" align="center">
         <nuxt-link to="/download" active-class="active">下载</nuxt-link>
