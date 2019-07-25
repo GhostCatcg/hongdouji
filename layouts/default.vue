@@ -1,6 +1,11 @@
 <template>
   <div class="default">
-    <el-container class="container">
+        <h-header></h-header>
+        <nuxt />
+
+        <h-footer></h-footer>
+
+    <!-- <el-container class="container">
 
       <el-header class="header">
         <h-header></h-header>
@@ -10,11 +15,11 @@
         <nuxt />
       </el-main>
 
-      <el-footer class="footer" :height="125">
+      <el-footer class="footer" height="125">
         <h-footer></h-footer>
       </el-footer>
 
-    </el-container>
+    </el-container> -->
   </div>
 </template>
 
