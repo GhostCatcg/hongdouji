@@ -4,8 +4,9 @@ const router = require("koa-router")()
 const bodyParser = require("koa-bodyparser")
 
 import Service from '../dbs/models/service' // 引入db模型
+import { userInfo } from 'os';
 
-
+import mongoose from "mongoose"
 
 
 
@@ -54,7 +55,7 @@ router.post("/upload/json", async (ctx, next) => {
         phone: postParam.phone,
         imgUrl: postParam.imgUrl
     })
-    console.log(service)
+    // console.log(service)
     let code
     try {
         await service.save()
@@ -64,12 +65,21 @@ router.post("/upload/json", async (ctx, next) => {
     }
 
     ctx.body = {
-        code:code,
+        code: code,
         data: postParam
     }
+    console.log(ctx.body)
 })
 
 
+router.get("/admin", async (ctx, next) => {
+    var service = mongoose.model("service")
+    service.find((err, serviceScheam) => {
+        console.log(serviceScheam)
+        ctx.body = serviceScheam
+        // return serviceScheam
+    })
+})
 
 router.get("/test", async (ctx, next) => {
     ctx.response.body = 'hello a '

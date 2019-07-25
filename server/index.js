@@ -10,9 +10,11 @@ const service = require("./service")// 导入客服接口
 import mongoose from 'mongoose' // 导入mongoose
 import dbConfig from "../dbs/config" // 导入mongoose配置
 
+import cors from "koa2-cors" // 导入cors 配置跨域
+
 
 const app = new Koa()
-
+app.use(cors()) // 注入跨域
 app.use(bodyParser()) // 注入post解析参数
 app.use(service.routes(), service.allowedMethods())// 注入路由
 

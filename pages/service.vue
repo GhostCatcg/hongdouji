@@ -84,18 +84,20 @@ export default {
     },
     async send(data) {
       // console.log("发送请求");
-      let imgRes = await axios.post(
-        "http://hdouji.com/upload/img",
-        this.images
-      );
+      // let imgRes = await axios.post(
+      //   "http://hdouji.com/upload/img",
+      //   this.images
+      // );
 
-      if (imgRes.status !== 200) {
-        alert("上传失败！");
-        return;
-      }
-      let jsonRes = await axios.post("http://hdouji.com/upload/json", data);
+      // if (imgRes.status !== 200) {
+      //   alert("上传失败！");
+      //   return;
+      // }
+
+      // let jsonRes = await axios.post("http://hdouji.com/upload/json", data);
+      let jsonRes = await axios.post("http://127.0.0.1:800/upload/json", data);
       // console.log(jsonRes)
-      if (imgRes.status !== 200) {
+      if (jsonRes.status !== 200) {
         alert("上传失败!");
         return;
       }
