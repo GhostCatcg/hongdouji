@@ -26,7 +26,7 @@
 <style lang="scss" scoped>
 @import "../assets/css/varibale"; // 引入全局样式
 .download{
-  height: 100%;
+  height: 80%;
 }
 .content {
   display: flex;

@@ -10,10 +10,6 @@ import mongoose from "mongoose"
 
 
 
-
-
-
-
 // 上传图片路由功能
 let imgUrl
 const multer = require('koa-multer');//加载koa-multer模块
@@ -72,12 +68,10 @@ router.post("/upload/json", async (ctx, next) => {
 })
 
 
-router.get("/admin", async (ctx, next) => {
+router.get("/admin1", async (ctx, next) => {
     var service = mongoose.model("service")
-    service.find((err, serviceScheam) => {
-        console.log(serviceScheam)
-        ctx.body = serviceScheam
-        // return serviceScheam
+    await service.find((err, serviceScheam) => {
+        ctx.response.body = serviceScheam
     })
 })
 
