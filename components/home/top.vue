@@ -6,7 +6,7 @@
       </el-col>
 
       <el-col class="msg" :span="24" align="center">
-        <p>享受我们在一起的甜蜜生活</p>
+        <p>红豆记记录美好爱情分享恋爱经历</p>
       </el-col>
 
       <el-col class="different" :span="24" align="center">

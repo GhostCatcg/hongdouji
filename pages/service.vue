@@ -94,8 +94,8 @@ export default {
       //   return;
       // }
 
-      // let jsonRes = await axios.post("http://hdouji.com/upload/json", data);
-      let jsonRes = await axios.post("http://127.0.0.1:800/upload/json", data);
+      let jsonRes = await axios.post("http://hdouji.com/upload/json", data);
+      // let jsonRes = await axios.post("http://127.0.0.1:800/upload/json", data);
       // console.log(jsonRes)
       if (jsonRes.status !== 200) {
         alert("上传失败!");
