@@ -95,7 +95,7 @@ export default {
       // }
 
       let jsonRes = await axios.post("http://hdouji.com/upload/json", data);
-      // let jsonRes = await axios.post("http://127.0.0.1:800/upload/json", data);
+      // let jsonRes = await axios.post("http://127.0.0.1:80/upload/json", data);
       // console.log(jsonRes)
       if (jsonRes.status !== 200) {
         alert("上传失败!");
@@ -124,7 +124,7 @@ export default {
 //   height: 1000px;
 // }
 .service{
-  height:80%;
+  height:100%;
 }
 .content {
   background: linear-gradient(to right, #ff5589, #ff77a0);

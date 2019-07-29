@@ -4,7 +4,7 @@ const router = require("koa-router")()
 const bodyParser = require("koa-bodyparser")
 
 import Service from '../dbs/models/service' // 引入db模型
-import { userInfo } from 'os';
+// import { userInfo } from 'os';
 
 import mongoose from "mongoose"
 
