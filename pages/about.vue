@@ -35,7 +35,7 @@
 
 .about {
   width: 100%;
-  height: 90%;
+  height: 100%;
 
   .BG {
     height: 100%;

@@ -125,6 +125,7 @@ export default {
 // }
 .service{
   height:100%;
+  
 }
 .content {
   background: linear-gradient(to right, #ff5589, #ff77a0);
