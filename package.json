@@ -1,7 +1,7 @@
 {
-  "name": "hongdouji",
+  "name":"hdouji",
   "version": "1.0.0",
-  "description": "hongdouji-app",
+"description":"红豆记,红豆记恋爱记录,情侣必备软件,情侣恋爱神器",
   "author": "GhostCat",
   "private": true,
   "scripts": {

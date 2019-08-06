@@ -10,24 +10,66 @@
       </el-col>
 
       <el-col class="different" :span="24" align="center">
-        <nuxt-link to>
-          <i class="iconfont">&#xe690;</i>
-          <span>Android</span>
-        </nuxt-link>
+        <!-- <div class="QRcode" v-for="(item, index) in qrcode" :key="index">
+          <div>
+            <i class="iconfont">{{item.icon}}</i>
+            <span>{{item.name}}</span>
+          </div>
+          <img :src="item.imgUrl" alt="">
+        </div>-->
 
-        <nuxt-link to>
-          <i class="iconfont">&#xe634;</i>
-          <span>iPhone</span>
-        </nuxt-link>
+        <div class="QRcode">
+          <div @mouseenter="enter" @mouseleave="leave">
+            <i class="iconfont">&#xe690;</i>
+            <span>Android</span>
+          </div>
 
-        <nuxt-link to>
-          <i class="iconfont">&#xe62c;</i>
-          <span>微信公众号</span>
-        </nuxt-link>
+          <img v-show="flag" src="@/assets/img/12_12.jpg" alt />
+        </div>
+        <div class="QRcode">
+          <div @mouseenter="enter" @mouseleave="leave">
+            <i class="iconfont">&#xe634;</i>
+            <span>iPhone</span>
+          </div>
+          <img v-show="flag" src="@/assets/img/12_12.jpg" alt />
+        </div>
+        <div class="QRcode">
+          <div @mouseenter="enter" @mouseleave="leave">
+            <i class="iconfont">&#xe62c;</i>
+            <span>微信公众号</span>
+          </div>
+          <img v-show="flag" src="@/assets/img/12_12.jpg" alt />
+        </div>
       </el-col>
     </el-row>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      qrcode: [
+        {
+          icon: "&#xe690;",
+          name: "Android",
+          imgUrl: "@/assets/img/12_12.jpg"
+        }
+      ],
+      flag: true
+    };
+  },
+  methods: {
+    enter(e) {
+      e.target.nextElementSibling.style.display = "block";
+      // console.log("我进来了", e.target.nextElementSibling);
+    },
+    leave(e) {
+      e.target.nextElementSibling.style.display = "none";
+      // console.log("我出去了");
+    }
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 @import "../../assets/css/varibale"; // 引入全局样式
@@ -71,23 +113,29 @@ span {
       2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff;
   }
   .different {
-    margin-top: 4rem;
-
-    a:nth-child(2) {
-      margin: 0 2rem;
-    }
-
-    a {
+    margin-top: 3rem;
+    .QRcode {
       display: inline-block;
-      width: 11rem;
+      width: 12rem;
       line-height: 3rem;
       background-color: $color;
       color: #fff;
       border-radius: 10px;
+      margin-top: 4rem;
 
+      &:nth-child(2) {
+        margin: 0 2rem;
+      }
       i {
         margin-right: 0.2rem;
         color: #fff;
+      }
+      div {
+        color: #fff;
+      }
+
+      img {
+        width: 80%;
       }
     }
   }
