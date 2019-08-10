@@ -10,36 +10,14 @@
       </el-col>
 
       <el-col class="different" :span="24" align="center">
-        <!-- <div class="QRcode" v-for="(item, index) in qrcode" :key="index">
-          <div>
-            <i class="iconfont">{{item.icon}}</i>
+        <div class="QRcode" v-for="(item, index) in qrcode" :key="index">
+          <div @mouseenter="enter(index)" @mouseleave="leave(index)">
+            <i :class="item.icon"></i>
             <span>{{item.name}}</span>
           </div>
-          <img :src="item.imgUrl" alt="">
-        </div>-->
+          <img class="img" :src="item.imgUrl" v-show="item.flag" alt />
+        </div>
 
-        <div class="QRcode">
-          <div @mouseenter="enter" @mouseleave="leave">
-            <i class="iconfont">&#xe690;</i>
-            <span>Android</span>
-          </div>
-
-          <img v-show="flag" src="@/assets/img/12_12.jpg" alt />
-        </div>
-        <div class="QRcode">
-          <div @mouseenter="enter" @mouseleave="leave">
-            <i class="iconfont">&#xe634;</i>
-            <span>iPhone</span>
-          </div>
-          <img v-show="flag" src="@/assets/img/12_12.jpg" alt />
-        </div>
-        <div class="QRcode">
-          <div @mouseenter="enter" @mouseleave="leave">
-            <i class="iconfont">&#xe62c;</i>
-            <span>微信公众号</span>
-          </div>
-          <img v-show="flag" src="@/assets/img/12_12.jpg" alt />
-        </div>
       </el-col>
     </el-row>
   </div>
@@ -50,22 +28,33 @@ export default {
     return {
       qrcode: [
         {
-          icon: "&#xe690;",
+          icon: "iconfont icon-anzhuo",
           name: "Android",
-          imgUrl: "@/assets/img/12_12.jpg"
-        }
-      ],
-      flag: true
+          imgUrl: require("@/assets/img/12_12.jpg"),
+          flag: false
+        },
+        {
+          icon: "iconfont icon-iconfontapple",
+          name: "iPhone",
+          imgUrl: require("@/assets/img/12_12.jpg"),
+          flag: false
+        },
+        {
+          icon: "iconfont icon-weixin",
+          name: "微信公众号",
+          imgUrl: require("@/assets/img/12_12.jpg"),
+          flag: false
+        },
+
+      ]
     };
   },
   methods: {
-    enter(e) {
-      e.target.nextElementSibling.style.display = "block";
-      // console.log("我进来了", e.target.nextElementSibling);
+    enter(index) {
+      this.qrcode[index].flag = true;
     },
-    leave(e) {
-      e.target.nextElementSibling.style.display = "none";
-      // console.log("我出去了");
+    leave(index) {
+      this.qrcode[index].flag = false;
     }
   }
 };
@@ -73,7 +62,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../assets/css/varibale"; // 引入全局样式
-
+@import "@/assets/font/iconfont.css";
+// .img{
+//   transition: display 1s ease-in;
+// }
 .container {
   margin: 0 auto;
   min-height: 10em;
@@ -114,6 +106,8 @@ span {
   }
   .different {
     margin-top: 3rem;
+    position: absolute;
+    top: 100%;
     .QRcode {
       display: inline-block;
       width: 12rem;
