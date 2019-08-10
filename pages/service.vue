@@ -93,10 +93,8 @@ export default {
       //   alert("上传失败！");
       //   return;
       // }
-
-      let jsonRes = await axios.post("http://hdouji.com/upload/json", data);
-      // let jsonRes = await axios.post("http://127.0.0.1:80/upload/json", data);
-      // console.log(jsonRes)
+      // 上传图片的功能等待更新为 base64
+      let jsonRes = await axios.post("https://hdouji.com/upload/json", data);
       if (jsonRes.status !== 200) {
         alert("上传失败!");
         return;
@@ -120,9 +118,8 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/css/varibale"; // 引入全局样式
 
-.service{
-  height:100%;
-  
+.service {
+  height: 100%;
 }
 .content {
   background: linear-gradient(to right, #ff5589, #ff77a0);

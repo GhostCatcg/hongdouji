@@ -11,6 +11,7 @@ import mongoose from "mongoose"
 
 
 // 上传图片路由功能
+// 上传图片的功能等待更新为 base64
 let imgUrl
 const multer = require('koa-multer');//加载koa-multer模块
 // 文件上传

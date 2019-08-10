@@ -11,8 +11,7 @@
 import axios from "axios";
 export default {
   mounted() {
-    axios.get(`http://hdouji.com/admin1`).then(res => {
-    // axios.get(`http://127.0.0.1/admin1`).then(res => {
+    axios.get(`https://hdouji.com/admin1`).then(res => {
       console.log(res);
       for (var i in res.data) {
         console.log(res.data[i]);
