@@ -119,10 +119,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/css/varibale"; // 引入全局样式
-// .content {
-//   margin: 10em auto;
-//   height: 1000px;
-// }
+
 .service{
   height:100%;
   

@@ -8,6 +8,7 @@
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server --exec babel-node",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production nodemon server/index.js --exec babel-node",
+    "prd":"pm2 start npm --name 'hongdouji' -- run start -i max",
     "generate": "nuxt generate"
   },
   "dependencies": {
