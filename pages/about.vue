@@ -64,7 +64,7 @@
         text-indent: 2rem;
         line-height: 2rem;
         color: #000;
-        margin-bottom: 5rem;
+        margin-bottom: 8rem;
         letter-spacing: 1px;
       }
 

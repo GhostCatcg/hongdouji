@@ -51,7 +51,6 @@ router.post("/upload/json", async (ctx, next) => {
         phone: postParam.phone,
         imgUrl: postParam.imgUrl
     })
-    // console.log(service)
     let code
     try {
         await service.save()
@@ -64,7 +63,6 @@ router.post("/upload/json", async (ctx, next) => {
         code: code,
         data: postParam
     }
-    console.log(ctx.body)
 })
 
 

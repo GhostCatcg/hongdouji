@@ -2,11 +2,11 @@
   <div class="I-top">
     <el-row>
       <el-col class="big-title" :span="24" align="center">
-        <p>情侣必备</p>
+        <p>{{bigTitle}}</p>
       </el-col>
 
       <el-col class="msg" :span="24" align="center">
-        <p>红豆记记录美好爱情分享恋爱经历</p>
+        <p>{{title}}</p>
       </el-col>
 
       <el-col class="different" :span="24" align="center">
@@ -15,9 +15,10 @@
             <i :class="item.icon"></i>
             <span>{{item.name}}</span>
           </div>
-          <img class="img" :src="item.imgUrl" v-show="item.flag" alt />
+          <div class="img" v-show="item.flag">
+            <img :src="item.imgUrl"  />
+          </div>
         </div>
-
       </el-col>
     </el-row>
   </div>
@@ -26,6 +27,8 @@
 export default {
   data() {
     return {
+      bigTitle: "情侣必备",
+      title: "红豆记记录美好爱情分享恋爱经历",
       qrcode: [
         {
           icon: "iconfont icon-anzhuo",
@@ -44,8 +47,7 @@ export default {
           name: "微信公众号",
           imgUrl: require("@/assets/img/12_12.jpg"),
           flag: false
-        },
-
+        }
       ]
     };
   },
@@ -61,11 +63,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/css/varibale"; // 引入全局样式
+@import "@/assets/css/varibale.scss"; // 引入全局样式记得带后缀
 @import "@/assets/font/iconfont.css";
-// .img{
-//   transition: display 1s ease-in;
-// }
+// @import "@/assets/css/temp.scss";
+
 .container {
   margin: 0 auto;
   min-height: 10em;
@@ -77,6 +78,7 @@ export default {
 p,
 span {
   color: #fff;
+  cursor: default;
 }
 .I-top {
   background: url("../../assets/img/home.jpg") no-repeat;
@@ -100,9 +102,8 @@ span {
   .big-title p,
   .msg p {
     color: $color;
-    text-shadow: 2px 2px 5px #fff, 2px 2px 5px #ffe, 2px 2px 5px #fff,
-      2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff,
-      2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff;
+    text-shadow: 2px 2px 5px #fff, 2px 2px 5px #ffe, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff,
+      2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff;
   }
   .different {
     margin-top: 3rem;
@@ -114,7 +115,7 @@ span {
       line-height: 3rem;
       background-color: $color;
       color: #fff;
-      border-radius: 10px;
+      border-radius: 30px;
       margin-top: 4rem;
 
       &:nth-child(2) {
@@ -123,15 +124,31 @@ span {
       i {
         margin-right: 0.2rem;
         color: #fff;
+        font-size: 1.2rem;
       }
       div {
         color: #fff;
       }
 
-      img {
-        width: 80%;
+      .img {
+        position: absolute;
+        top: 60%;
+        padding-top: 20px;
+        z-index: -1;
+        background-color: $color;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        object-fit: cover;
+        box-sizing: border-box;
+        img {
+          height: 100%;
+          width: 80%;
+          object-fit: cover;
+        }
       }
     }
   }
 }
+
+
 </style>
