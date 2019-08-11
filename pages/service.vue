@@ -39,14 +39,21 @@
             <span class="left">上传截图：</span>
             <div class="seimg">
               <label for="imgfile">选择图片</label>
-              <input type="file" @change="uploadImg($event,'HF')" id="imgfile" />
+              <input
+                type="file"
+                @change="uploadImg($event,'HF')"
+                ref="imgfile"
+                id="imgfile"
+                accept="image/png, image/jpeg, image/gif, image/jpg"
+              />
               <span>不超过2M</span>
             </div>
           </div>
           <div>
             <label class="left" for>联系方式：</label>
             <div class="phone">
-              <input v-model="number" type="text" placeholder="您的手机号或者QQ号" />
+              <img id="imgDome" src alt />
+              <input v-model="number" type="number" placeholder="您的手机号或者QQ号" />
               <span class="mark">仅豆印工作人员可见，请保持您的联系方式畅通。</span>
             </div>
           </div>
@@ -69,28 +76,63 @@ export default {
       platform: {
         type: "0" // 0安卓 1苹果
       },
-      images: ""
+      images: "",
+      imgBase64: ""
     };
   },
   methods: {
+    verify() {
+      if (this.suggest === "") {
+        alert("请输入建议");
+        return;
+      }
+      if (this.number === "") {
+        alert("请输入手机号");
+        return;
+      }
+
+      if (window.FileReader) {
+        var fr = new FileReader();
+        // add your code here
+      } else {
+        alert("您的浏览器不支持上传图片！");
+        return;
+      }
+    },
     // 发送数据
     submitForm() {
-      var jsonData = {
-        suggest: this.suggest,
-        number: this.number,
-        phone: this.platform.type
-      };
-      this.send(jsonData);
-    },
-    async send(data) {
+      // 简单验证
+      this.verify();
 
+      let _this = this; //转换this
+
+      var imgFile = this.$refs.imgfile.files[0]; // 获取图片文件
+      var fr = new FileReader(imgFile); // 读取文件
+      fr.readAsDataURL(imgFile);
+      fr.onload = function() {
+        // 图片读取完成后
+        _this.imgBase64 = fr.result; // 读取到的图片路径是Base64的
+        var jsonData = {
+          suggest: _this.suggest,
+          number: _this.number,
+          phone: _this.platform.type,
+          imgBase64: _this.imgBase64
+        };
+        _this.send(jsonData);
+      };
+    },
+
+    async send(data) {
+      console.log(data);
       // 上传图片的功能等待更新为 base64
       let jsonRes = await axios.post("https://hdouji.com/upload/json", data);
+      // let jsonRes = await axios.post("http://localhost:8080/upload/json", data);
       if (jsonRes.status !== 200) {
         alert("上传失败!");
         return;
       }
       alert("上传成功！");
+      this.$router.push("/");
     },
 
     uploadImg(e, type) {
@@ -108,7 +150,13 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/css/varibale"; // 引入全局样式
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 .service {
   height: 100%;
 }

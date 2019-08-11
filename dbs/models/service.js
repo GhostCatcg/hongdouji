@@ -8,7 +8,8 @@ let serviceScheam = new mongoose.Schema({
     suggest:String,
     number:Number,
     phone:Number,
-    imgUrl:String
+    imgUrl:String,
+    imgBase64:String
 })
 
 

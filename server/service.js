@@ -50,7 +50,8 @@ router.post("/upload/json", async (ctx, next) => {
         suggest: postParam.suggest,
         number: postParam.number,
         phone: postParam.phone,
-        imgUrl: postParam.imgUrl
+        imgUrl: postParam.imgUrl,
+        imgBase64:postParam.imgBase64
     })
     let code
     try {
@@ -75,11 +76,8 @@ router.get("/admin1", async (ctx, next) => {
 })
 
 router.get("/test", async (ctx, next) => {
-    ctx.response.body = 'hello a '
+    ctx.response.body = 'Hello, GhostCat'
 })
-
-
-
 
 
 

@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<head>
-<title></title>
-</head>
-<body>
+<html lang="en">
 
-<img id="expImg"/>
-<img id="img" style="display:none"/>
-<div><input type="file" id="file"></div>
-<div id="btn" style="display:inline-block;height:48px; line-height:60px;border:1px solid black;">确定</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input name="big_ticket" type="file" value="" accept="image/jpg,image/jpeg,image/png,image/gif"
+        οnchange="previewImage(this)" multiple />
 
 </body>
-<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
-<script src="base64.js"></script>
+<script>
 
+    function previewImage(file) {
+        var target = file.name;
+        if (file.files && file.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (evt) {
+                console.log(evt.target.result)//即图片，此处可进行预览操作
+            }
+            return reader.readAsDataURL(file.files[0]);
+        }
+    }
+
+</script>
 
 </html>
