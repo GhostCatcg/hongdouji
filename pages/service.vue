@@ -83,16 +83,7 @@ export default {
       this.send(jsonData);
     },
     async send(data) {
-      // console.log("发送请求");
-      // let imgRes = await axios.post(
-      //   "http://hdouji.com/upload/img",
-      //   this.images
-      // );
 
-      // if (imgRes.status !== 200) {
-      //   alert("上传失败！");
-      //   return;
-      // }
       // 上传图片的功能等待更新为 base64
       let jsonRes = await axios.post("https://hdouji.com/upload/json", data);
       if (jsonRes.status !== 200) {

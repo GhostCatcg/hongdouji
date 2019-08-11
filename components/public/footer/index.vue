@@ -2,13 +2,15 @@
   <div class="footer">
     <footer>
       <!-- https://blog.csdn.net/Fabulous1111/article/details/79651832 -->
-      <div class="footer-top">
+      <!-- <div class="footer-top">
         <nuxt-link to="/terms">注册协议</nuxt-link>
         <nuxt-link to="/privacy">隐私协议</nuxt-link>
-      </div>
+      </div> -->
       <p>
         <span>豆印有限公司</span>
         <span>版权所有</span>
+        <nuxt-link to="/terms">注册协议</nuxt-link>
+        <nuxt-link to="/privacy">隐私协议</nuxt-link>
       </p>
       <p>公司地址：浙江省杭州市江干区下沙万亚金沙湖1号2幢1301室 电话：(0571) 8697 2071</p>
       <div class="ba">
@@ -48,6 +50,13 @@ footer {
   }
   p {
     margin-bottom: 0.4rem;
+    p{
+      margin:0 .2rem;
+    }
+    a{
+      margin:0 .2rem;
+
+    }
   }
   .footer-top{
     position:absolute;

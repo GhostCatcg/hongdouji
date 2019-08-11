@@ -29,8 +29,8 @@ async function start() {
   const nuxt = new Nuxt(config)
 
   const {
-    host = process.env.HOST || '127.0.0.1',
-    port = process.env.PORT || 3000
+    host = process.env.HOST || '0.0.0.0',
+    port = process.env.PORT || 8080
   } = nuxt.options.server
 
 
@@ -51,9 +51,9 @@ async function start() {
   })
 
 
-  // app.listen(port, host)
+  app.listen(port, host)
   // 暂时没有解决办法的设置host和port   服务器上使用这套
-  app.listen(8080, "0.0.0.0")
+  // app.listen(8080, "0.0.0.0")
 
   consola.ready({
     message: `Server listening on http://${host}:${port}`,
