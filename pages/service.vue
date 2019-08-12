@@ -1,7 +1,7 @@
 <template>
   <div class="service">
     <div class="content">
-      <p class="title">人本精神 服务至上</p>
+      <p class="title">{{title}}</p>
       <div class="main">
         <p class="m-title">留言客服</p>
         <div class="from">
@@ -77,7 +77,8 @@ export default {
         type: "0" // 0安卓 1苹果
       },
       images: "",
-      imgBase64: ""
+      imgBase64: "",
+      title:"人本精神 服务至上"
     };
   },
   methods: {
