@@ -19,6 +19,7 @@
   }
   span{
     color:#fff;
+    font-size: 1.2rem;
   }
 }
 </style>

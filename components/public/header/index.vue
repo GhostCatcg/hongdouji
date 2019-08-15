@@ -5,7 +5,7 @@
                 <left-bar></left-bar>
             </el-col>
             
-            <el-col :span="14" :offset="2" align="center">
+            <el-col :span="13" :offset="3" align="center">
                 <right-bar></right-bar>
             </el-col>
 

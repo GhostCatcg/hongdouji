@@ -53,9 +53,9 @@ export default {
     box-sizing: content-box;
   }
   a {
-    font-size: 0.8rem;
-    // font-weight: 600;
+    font-size: 1.1rem;
     color: #fff;
+    letter-spacing: 1px;
   }
 }
 </style>
