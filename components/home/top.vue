@@ -81,8 +81,9 @@ span {
   cursor: default;
 }
 .I-top {
-  background: url("../../assets/img/home.jpg") no-repeat;
-  background-size: 100% 100%;
+  // background: url("../../assets/img/home.jpg") no-repeat;
+  // background-size: 100% 100%;
+  background:linear-gradient(215deg,rgba(255,61,73,1) 0%,rgba(255,116,104,1) 100%); 
   height: 30rem;
   position: relative;
 

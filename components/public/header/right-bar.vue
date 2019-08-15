@@ -8,7 +8,7 @@
         <nuxt-link to="/about" active-class="active">关于我们</nuxt-link>
       </el-col>
       <el-col :span="3" align="center">
-        <nuxt-link to="/service" active-class="active">最新动态</nuxt-link>
+        <nuxt-link to="/news" active-class="active">最新动态</nuxt-link>
       </el-col>
       <el-col :span="3" align="center">
         <nuxt-link to="/service" active-class="active">意见反馈</nuxt-link>
@@ -38,7 +38,7 @@ export default {
 
 .h-rb {
   .nuxt-link-exact-active {
-    color: #ff5387;
+    // color: #ff5387;
   }
   border-bottom: 0px solid $color;
   box-sizing: border-box;
@@ -52,6 +52,7 @@ export default {
   }
   a {
     font-size: 0.8rem;
+    // font-weight: 600;
     color: #fff;
   }
 }

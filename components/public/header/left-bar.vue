@@ -15,6 +15,10 @@
     width: 30px;
     position:relative;
     top:-2px;
+    margin-right:10px;
+  }
+  span{
+    color:#fff;
   }
 }
 </style>
