@@ -5,7 +5,7 @@
                 <left-bar></left-bar>
             </el-col>
             
-            <el-col :span="12" :offset="4" align="center">
+            <el-col :span="14" :offset="2" align="center">
                 <right-bar></right-bar>
             </el-col>
 
@@ -19,7 +19,12 @@
     .H-index{
         line-height: 4rem;
         height:4rem;
-        background-color: #fff;
+        position: absolute;
+        z-index: 9;
+        right:0;
+        left:0;
+        top: 2rem;
+        width: 100%;
     }
 
 </style>

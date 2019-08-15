@@ -1,6 +1,6 @@
 <template>
   <div class="default">
-        <h-header></h-header>
+        <h-header class="header"></h-header>
         <nuxt id="main"/>
 
         <h-footer></h-footer>
@@ -24,7 +24,7 @@ export default {
   height: 100%;
 }
 .header{
-
+  
 }
 .push,
 .footer {
