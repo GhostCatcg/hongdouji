@@ -39,6 +39,8 @@ export default {
 .h-rb {
   .nuxt-link-exact-active {
     // color: #ff5387;
+    border-bottom: 4px solid #fff;
+    padding-bottom:5px;
   }
   border-bottom: 0px solid $color;
   box-sizing: border-box;
@@ -47,7 +49,7 @@ export default {
     color: #fff;
     background: #000;
     border-radius: 50px;
-    padding: 0.8rem 3.5rem;
+    padding: 0.7rem 2.7rem;
     box-sizing: content-box;
   }
   a {

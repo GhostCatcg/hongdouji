@@ -102,9 +102,9 @@ span {
   }
   .big-title p,
   .msg p {
-    color: $color;
-    text-shadow: 2px 2px 5px #fff, 2px 2px 5px #ffe, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff,
-      2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff;
+    color: #fff;
+    // text-shadow: 2px 2px 5px #fff, 2px 2px 5px #ffe, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff,
+    //   2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff, 2px 2px 5px #fff;
   }
   .different {
     margin-top: 3rem;
