@@ -1,8 +1,7 @@
 <template>
   <div class="h-lb">
     <nuxt-link to="/">
-      <img src="@/assets/img/logo.png" alt />
-      <span>红豆记</span>
+        <img src="@/assets/img/logo.png" alt />
     </nuxt-link>
   </div>
 </template>
@@ -12,7 +11,7 @@
   
   img {
     vertical-align: middle;
-    width: 30px;
+    width: 110px;
     position:relative;
     top:-2px;
     margin-right:10px;
