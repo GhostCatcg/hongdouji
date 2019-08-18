@@ -14,7 +14,7 @@
         <nuxt-link to="/service" active-class="active">意见反馈</nuxt-link>
       </el-col>
       <el-col :span="5" align="center">
-        <nuxt-link to="/download" class="download" active-class="active">下载</nuxt-link>
+        <nuxt-link to="/download" class="download">下载</nuxt-link>
       </el-col>
     </el-row>
   </div>
@@ -37,7 +37,7 @@ export default {
 @import "../../../assets/css/varibale";
 
 .h-rb {
-  .nuxt-link-exact-active {
+  .nuxt-link-exact-active.active {
     // color: #ff5387;
     border-bottom: 4px solid #fff;
     padding-bottom:5px;

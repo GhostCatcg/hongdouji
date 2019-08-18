@@ -21,7 +21,7 @@
         <p class="I-msg">让生活变得更有趣</p>
       </div>
     </div>
-    
+
     <div class="I-arrow">
       <img src="@/assets/img/arrow.png" alt />
     </div>
@@ -71,6 +71,13 @@
         -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
       }
     }
+  }
+}
+
+
+@media screen and (max-width: 1500px) {
+  .I-top {
+    padding: 10% 5% 5%;
   }
 }
 </style>
