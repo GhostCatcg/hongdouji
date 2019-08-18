@@ -2,10 +2,11 @@
   <div class="footer">
     <footer>
       <!-- https://blog.csdn.net/Fabulous1111/article/details/79651832 -->
-      <!-- <div class="footer-top">
-        <nuxt-link to="/terms">注册协议</nuxt-link>
-        <nuxt-link to="/privacy">隐私协议</nuxt-link>
-      </div> -->
+      <div class="footer-logo">
+        <nuxt-link to="/">
+          <img src="../../../assets/img/logo.png" alt="">
+        </nuxt-link>
+      </div>
       <p>
         <span>豆印有限公司</span>
         <span>版权所有</span>
@@ -27,12 +28,21 @@
 /* 脚步区域 */
 footer {
   width: 100%;
-  height: 125px;
+  // height: 125px;
   background-color: #181818;
   text-align: center;
   color: #6d6d6d;
-  padding: 20px 0;
+  padding: 1.5rem 0;
   position: relative;
+  .footer-logo{
+    position: absolute;
+    left:7rem;
+    top:50%;
+    transform: translateY(-50%);
+    img{
+      width: 10rem;
+    }
+  }
   .state span {
     cursor: pointer;
   }
@@ -49,7 +59,7 @@ footer {
     vertical-align: sub;
   }
   p {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.6rem;
     p{
       margin:0 .2rem;
     }

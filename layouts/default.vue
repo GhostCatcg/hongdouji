@@ -2,9 +2,7 @@
   <div class="default">
         <h-header class="header"></h-header>
         <nuxt id="main"/>
-
         <h-footer></h-footer>
-
   </div>
 </template>
 

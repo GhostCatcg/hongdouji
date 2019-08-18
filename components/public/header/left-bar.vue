@@ -11,7 +11,7 @@
   
   img {
     vertical-align: middle;
-    width: 110px;
+    width: 120px;
     position:relative;
     top:-2px;
     margin-right:10px;

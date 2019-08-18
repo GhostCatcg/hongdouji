@@ -1,20 +1,14 @@
 <template>
   <div class="I-top">
-    <el-row>
-      <!-- <el-col class="big-title" :span="24" align="center">
-        <p>{{bigTitle}}</p>
-      </el-col>
-
-      <el-col class="msg" :span="24" align="center">
-        <p>{{title}}</p>
-      </el-col>-->
-
-      <el-col :span="8" align="right" class="I-home">
-        <img src="@/assets/img/home1.png" alt />
-      </el-col>
-
-      <el-col class="different" :span="10" align="center">
+    <el-row class="I-el-row">
+      <el-col :span="10" align="right" class="I-home">
         <div>
+          <img src="@/assets/img/home1.png" alt />
+        </div>
+      </el-col>
+
+      <el-col class="different" :span="12" align="center">
+        <div class="text">
           <p class="big-title">{{bigTitle}}</p>
           <p class="msg">{{title}}</p>
         </div>
@@ -41,14 +35,14 @@ export default {
       title: "红豆记记录美好爱情分享恋爱经历",
       qrcode: [
         {
-          icon: "iconfont icon-anzhuo",
-          name: "Android",
+          icon: "iconfont icon-iconfontapple",
+          name: "iPhone",
           imgUrl: require("@/assets/img/12_12.jpg"),
           flag: false
         },
         {
-          icon: "iconfont icon-iconfontapple",
-          name: "iPhone",
+          icon: "iconfont icon-anzhuo",
+          name: "Android",
           imgUrl: require("@/assets/img/12_12.jpg"),
           flag: false
         },
@@ -98,22 +92,36 @@ span {
   height: 45rem;
   padding-top: 6rem;
   position: relative;
-  .I-home {
+  .I-el-row {
     position: relative;
     bottom: -4rem;
-    img {
+    height: 100%;
+  }
+
+  .I-home {
+    height: 100%;
+    div {
+      margin-right: 2rem;
       width: 400px;
+    }
+    img {
+      height: 100%;
+      width: 100%;
     }
   }
   div {
     z-index: 1;
-    height: 100%;
+  }
+  .text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .big-title {
     font-size: 4rem;
   }
   .msg {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
   .big-title,
   .msg {
@@ -122,20 +130,25 @@ span {
     letter-spacing: 2px;
   }
   .different {
-    margin-top: 4rem;
-    top: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
+    height: 100%;
+    padding-top: 5rem;
+    margin-left: 1rem;
+    .QR-wapper {
+      text-align: left;
+    }
     .QRcode {
       display: inline-block;
-      width: 12rem;
+      width: 9rem;
       line-height: 3rem;
-      background-color: $color;
+      font-size: 0.8rem;
+      background-color: #000;
       color: #fff;
-      border-radius: 30px;
-      margin-top: 4rem;
-
+      border-radius: 5px;
+      margin-top: 1rem;
+      text-align: center;
       &:nth-child(2) {
         margin: 0 2rem;
       }
@@ -146,20 +159,22 @@ span {
       }
       div {
         color: #fff;
+        height: 100%;
       }
-
+      position: relative;
       .img {
         position: absolute;
         top: 60%;
         padding-top: 20px;
         z-index: -1;
-        background-color: $color;
+        background-color: #000;
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
         object-fit: cover;
         box-sizing: border-box;
+        width: 9rem;
+        height: 9.5rem;
         img {
-          height: 100%;
           width: 80%;
           object-fit: cover;
         }
