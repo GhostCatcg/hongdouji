@@ -1,7 +1,10 @@
 <template>
   <div class="service">
     <div class="content">
-      <p class="title">{{title}}</p>
+      <!-- <p class="title">{{title}}</p> -->
+      <div class="header">
+        <img src="@/assets/img/feedback.png" alt="">
+      </div>
       <div class="main">
         <p class="m-title">留言客服</p>
         <div class="from">
@@ -158,13 +161,9 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-.service {
-  height: 100%;
-}
+
 .content {
-  background: linear-gradient(to right, #ff5589, #ff77a0);
-  padding-top: 3rem;
-  height: 100%;
+  // background: linear-gradient(to right, #ff5589, #ff77a0);
   position: relative;
   &::after,
   &::before {
@@ -187,6 +186,12 @@ input[type="number"] {
     background-position: -4em -2em;
     top: 0em;
     left: 0em;
+  }
+  .header{
+    img{
+      width:100%;
+      height: 100%;
+    }
   }
   .title {
     color: #fff;
