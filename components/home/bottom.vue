@@ -17,8 +17,8 @@
         <img src="@/assets/img/2.png" alt />
       </div>
       <div class="I-text">
-        <p class="I-title">分享生活</p>
-        <p class="I-msg">让生活变得更有趣</p>
+        <p class="I-title">随时拍摄</p>
+        <p class="I-msg">记录美好瞬间</p>
       </div>
     </div>
 
@@ -27,8 +27,8 @@
     </div>
     <div class="I-line">
       <div class="I-text">
-        <p class="I-title">分享生活</p>
-        <p class="I-msg">让生活变得更有趣</p>
+        <p class="I-title">情侣必备</p>
+        <p class="I-msg">你想要的二人空间</p>
       </div>
       <div>
         <img src="@/assets/img/3.png" alt />

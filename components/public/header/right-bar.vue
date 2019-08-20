@@ -1,16 +1,16 @@
 <template>
   <div class="h-rb">
     <el-row>
-      <el-col :offset="2" :span="3" align="center" :class="active">
+      <el-col :offset="2" :span="4" align="center" :class="active">
         <nuxt-link to="/" active-class="active">首页</nuxt-link>
       </el-col>
-      <el-col :span="3" align="center">
+      <el-col :span="4" align="center">
         <nuxt-link to="/about" active-class="active">关于我们</nuxt-link>
       </el-col>
-      <!-- <el-col :span="3" align="center">
+      <!-- <el-col :span="4" align="center">
         <nuxt-link to="/news" active-class="active">最新动态</nuxt-link>
       </el-col> -->
-      <el-col :span="3" align="center">
+      <el-col :span="4" align="center">
         <nuxt-link to="/service" active-class="active">意见反馈</nuxt-link>
       </el-col>
       <el-col :span="5" align="center">
@@ -38,7 +38,6 @@ export default {
 
 .h-rb {
   .nuxt-link-exact-active.active {
-    // color: #ff5387;
     border-bottom: 4px solid #fff;
     padding-bottom:5px;
   }

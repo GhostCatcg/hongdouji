@@ -4,14 +4,14 @@
       <!-- <p class="title">{{title}}</p> -->
       <div class="s-header">
         <div>
-            <p>意见反馈</p>
-            <p>Feedback</p>
-          </div>
-        <img src="@/assets/img/feedback.png" alt="">
+          <p>意见反馈</p>
+          <p>Feedback</p>
+        </div>
+        <img src="@/assets/img/feedback.png" alt />
       </div>
       <div class="main">
-        <img class="left-img" src="../assets/img/pink.png" alt="">
-        <img class="right-img" src="../assets/img/pink.png" alt="">
+        <img class="left-img" src="../assets/img/pink.png" alt />
+        <img class="right-img" src="../assets/img/pink.png" alt />
         <div class="from">
           <div>
             <span class="left">选择系统：</span>
@@ -86,7 +86,7 @@ export default {
       },
       images: "",
       imgBase64: "",
-      title:"人本精神 服务至上"
+      title: "人本精神 服务至上"
     };
   },
   methods: {
@@ -192,28 +192,28 @@ input[type="number"] {
     top: 0em;
     left: 0em;
   }
-  .s-header{
+  .s-header {
     position: relative;
-      div {
-        position: absolute;
-        position: absolute;
-        z-index: 99;
-        margin: 0 auto;
-        width: 100%;
-        text-align: center;
-        top: 50%;
-        transform: translateY(-50%);
-        p {
-          color: #fff;
-          font-size: 3rem;
-          letter-spacing: 3px;
-          &:first-child {
-            font-size: 4rem;
-          }
+    div {
+      position: absolute;
+      position: absolute;
+      z-index: 99;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      p {
+        color: #fff;
+        font-size: 3rem;
+        letter-spacing: 3px;
+        &:first-child {
+          font-size: 4rem;
         }
       }
-    img{
-      width:100%;
+    }
+    img {
+      width: 100%;
       height: 100%;
     }
   }
@@ -226,40 +226,48 @@ input[type="number"] {
   }
   .main {
     width: 60%;
-    margin: 10rem auto;
+    margin: 12rem auto;
     background-color: #fff;
     padding: 2.5rem 5rem;
-    // box-shadow: 0px 0px 10px 2px #bbb;
-    background:#fff;
-    position:relative;
+    background: #fff;
+    position: relative;
     .m-title {
       text-align: center;
       font-size: 1.5rem;
       color: $color;
       margin-bottom: 2.5em;
     }
-    &>img{
-      position:absolute;
-      width:25rem;
+    & > img {
+      position: absolute;
+      width: 25rem;
       z-index: -1;
     }
-    .left-img{
-      left:-5rem;
-      bottom:-5rem;
+    .left-img {
+      left: -5rem;
+      bottom: -5rem;
     }
-    .right-img{
-      right:-5rem;
-      top:-5rem;
+    .right-img {
+      right: -5rem;
+      top: -5rem;
     }
     .from {
       width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      & > div:nth-child(2) {
+        align-items: flex-start;
+      }
       & > div {
         width: 100%;
         display: flex;
-        margin-bottom: 0.6em;
+        align-items: center;
+        margin-bottom: 1.1rem;
+
         & > .left {
           padding: 0.2em 1em;
-          font-size: 0.9em;
+          font-size: 1.5rem;
         }
         & > div {
           flex: 1;
@@ -268,8 +276,8 @@ input[type="number"] {
             width: 100%;
             height: 12em;
             padding: 0.6em 1em;
-            line-height: 1.5em;
-            font-size: 0.8em;
+            line-height: 1.5;
+            font-size: 1.1em;
             color: #333;
             border: 1px solid #d7d7d7;
           }
@@ -282,7 +290,7 @@ input[type="number"] {
           label {
             border: 1px solid #d7d7d7;
             padding: 0.4em 1em;
-            font-size: 0.8em;
+            font-size: 1.1em;
             cursor: pointer;
           }
           input {
@@ -291,16 +299,18 @@ input[type="number"] {
           }
           span {
             margin-left: 0.3em;
-            font-size: 0.7em;
+            font-size: .9rem;
+            color: #666;
           }
         }
         .phone {
           .mark {
-            font-size: 0.7em;
+            font-size: .9rem;
+            color: #666;
           }
           input {
-            font-size: 0.7em;
-            padding: 0.5em;
+            font-size: 1.1rem;
+            padding: 0.5rem;
           }
         }
       }
@@ -313,7 +323,7 @@ input[type="number"] {
         display: inline-block;
         padding: 0.3em 1em;
         text-align: center;
-        font-size: 0.8em;
+        font-size: 1.1em;
         border-radius: 5px;
         border: 1px solid $color;
         margin-right: 1em;
