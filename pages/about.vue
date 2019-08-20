@@ -14,6 +14,7 @@
           <p
             class="text"
           >一款有趣有温度的情侣社交和服务软件，有一群90后的年轻人开发，让情侣们更随心晒出他们的美好点滴，记录他们的时光印记，享受我们提供的情侣服务。我们希望有情人终成眷属，单身狗不再孤独，这是我们的愿景，也是我们的初衷。</p>
+          <p class="text"></p>
           <div class="img-wapper">
             <div class="img">
               <img src="@/assets/img/look.png" alt />
@@ -79,7 +80,7 @@
         color: #0b0b0b;
       }
       .text {
-        text-indent: 2rem;
+        text-indent: 4rem;
         line-height: 1.8;
         color: #000;
         letter-spacing: 1px;
