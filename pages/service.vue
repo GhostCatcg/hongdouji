@@ -10,8 +10,8 @@
         <img src="@/assets/img/feedback.png" alt />
       </div>
       <div class="main">
-        <img class="left-img" src="../assets/img/pink.png" alt />
-        <img class="right-img" src="../assets/img/pink.png" alt />
+        <img class="left-img" src="@/assets/img/pink.png" alt />
+        <img class="right-img" src="@/assets/img/green.png" alt />
         <div class="from">
           <div>
             <span class="left">选择系统：</span>
@@ -247,7 +247,7 @@ input[type="number"] {
       bottom: -5rem;
     }
     .right-img {
-      right: -5rem;
+      right: -10rem;
       top: -5rem;
     }
     .from {

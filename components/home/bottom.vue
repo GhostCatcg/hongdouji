@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="I-arrow">
-      <img src="@/assets/img/arrow.png" class="matrix" alt />
+      <img src="@/assets/img/arrow1.png" alt />
     </div>
     <div class="I-line">
       <div>

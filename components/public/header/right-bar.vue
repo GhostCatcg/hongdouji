@@ -8,7 +8,7 @@
         <nuxt-link to="/about" active-class="active">关于我们</nuxt-link>
       </el-col>
       <el-col :span="4" align="center">
-        <nuxt-link to="/news" active-class="active">最新动态</nuxt-link>
+        <nuxt-link to="/" data-url="news" active-class="active">最新动态</nuxt-link>
       </el-col>
       <el-col :span="4" align="center">
         <nuxt-link to="/service" active-class="active">意见反馈</nuxt-link>
