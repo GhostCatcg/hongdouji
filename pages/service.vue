@@ -2,11 +2,16 @@
   <div class="service">
     <div class="content">
       <!-- <p class="title">{{title}}</p> -->
-      <div class="header">
+      <div class="s-header">
+        <div>
+            <p>意见反馈</p>
+            <p>Feedback</p>
+          </div>
         <img src="@/assets/img/feedback.png" alt="">
       </div>
       <div class="main">
-        <p class="m-title">留言客服</p>
+        <img class="left-img" src="../assets/img/pink.png" alt="">
+        <img class="right-img" src="../assets/img/pink.png" alt="">
         <div class="from">
           <div>
             <span class="left">选择系统：</span>
@@ -187,7 +192,26 @@ input[type="number"] {
     top: 0em;
     left: 0em;
   }
-  .header{
+  .s-header{
+    position: relative;
+      div {
+        position: absolute;
+        position: absolute;
+        z-index: 99;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        p {
+          color: #fff;
+          font-size: 3rem;
+          letter-spacing: 3px;
+          &:first-child {
+            font-size: 4rem;
+          }
+        }
+      }
     img{
       width:100%;
       height: 100%;
@@ -202,15 +226,30 @@ input[type="number"] {
   }
   .main {
     width: 60%;
-    margin: 0 auto 6rem;
+    margin: 10rem auto;
     background-color: #fff;
     padding: 2.5rem 5rem;
     // box-shadow: 0px 0px 10px 2px #bbb;
+    background:#fff;
+    position:relative;
     .m-title {
       text-align: center;
       font-size: 1.5rem;
       color: $color;
       margin-bottom: 2.5em;
+    }
+    &>img{
+      position:absolute;
+      width:25rem;
+      z-index: -1;
+    }
+    .left-img{
+      left:-5rem;
+      bottom:-5rem;
+    }
+    .right-img{
+      right:-5rem;
+      top:-5rem;
     }
     .from {
       width: 100%;
