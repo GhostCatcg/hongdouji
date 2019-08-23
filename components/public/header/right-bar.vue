@@ -13,7 +13,7 @@
       <el-col :span="4" align="center">
         <nuxt-link to="/service" active-class="active">意见反馈</nuxt-link>
       </el-col>
-      <el-col :span="5" align="center">
+      <el-col :span="6" align="center">
         <nuxt-link to="/" class="download">关注我们</nuxt-link>
       </el-col>
     </el-row>

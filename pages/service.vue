@@ -168,7 +168,6 @@ input[type="number"] {
 }
 
 .content {
-  // background: linear-gradient(to right, #ff5589, #ff77a0);
   position: relative;
   &::after,
   &::before {
