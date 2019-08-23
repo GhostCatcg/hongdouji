@@ -7,23 +7,41 @@
       </div>
       <img src="@/assets/img/news.png" alt />
     </div>
-    <div class="n1-content">
-      <div class="n1-new">
-
-      </div>
-      <div class="n1-old">
-          <dl>
-              <dt>往期动态</dt>
-          </dl>
-      </div>
-    </div>
+    <el-row>
+      <el-col :span="8">
+        <div>
+          <img src="../assets/img/news.png" alt />
+        </div>
+      </el-col>
+      <el-col :span="4">
+        <div class="n1-o-title">
+          <p>往期动态</p>
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
-
+<script>
+export default {
+  data() {
+    return {};
+  }
+};
+</script>
 <style lang="scss" scoped>
 .n1-news {
   .n1-content {
-      padding:4rem;
+    padding: 4rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    & > div {
+    }
+    .n1-new {
+    }
+    .n1-old {
+      flex: 1;
+    }
   }
   .s-header {
     position: relative;
