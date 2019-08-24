@@ -230,6 +230,7 @@ input[type="number"] {
     padding: 2.5rem 5rem;
     background: #fff;
     position: relative;
+    box-shadow: 0px 0px 8px -3px #bdbdbd;
     .m-title {
       text-align: center;
       font-size: 1.5rem;

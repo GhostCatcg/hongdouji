@@ -72,7 +72,7 @@
 
     .main {
       background-color: #fff;
-      padding: 4rem 20%;
+      padding: 8rem 20%;
       box-shadow: 0px 0px 10px 2px #bbb;
       margin-top:-1rem;
       .main-title {

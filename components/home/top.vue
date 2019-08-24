@@ -46,12 +46,12 @@ export default {
           imgUrl: require("@/assets/img/12_12.jpg"),
           flag: false
         },
-        {
-          icon: "iconfont icon-weixin",
-          name: "微信公众号",
-          imgUrl: require("@/assets/img/12_12.jpg"),
-          flag: false
-        }
+        // {
+        //   icon: "iconfont icon-weixin",
+        //   name: "微信公众号",
+        //   imgUrl: require("@/assets/img/12_12.jpg"),
+        //   flag: false
+        // }
       ]
     };
   },
