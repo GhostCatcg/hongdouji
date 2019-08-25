@@ -13,8 +13,8 @@
       <el-col :span="4" align="center">
         <nuxt-link to="/service" active-class="active">意见反馈</nuxt-link>
       </el-col>
-      <el-col :span="6" align="center" class="about" @mouseenter="enter()" @mouseleave="leave()">
-        <nuxt-link to="/about" class="download" >
+      <el-col :span="6" align="center" class="about" >
+        <nuxt-link to="/about" class="download" @mouseenter.native="enter()" @mouseleave.native="leave()">
           关注我们
           <div class="about-imgWapper" v-show="showFlag">
             <img src="@/assets/img/12_12.jpg" alt />
@@ -30,18 +30,19 @@ export default {
   data() {
     return {
       showFlag: false,
-      active:"active"
+      active: "active"
     };
   },
   methods: {
     enter() {
-      this.showFlag = true
-      console.log("进入")
-    },
-    leave(){
-      this.showFlag = false
-      console.log("离开")
+      console.log("进入");
 
+      this.showFlag = true;
+    },
+    leave() {
+      console.log("离开");
+
+      this.showFlag = false;
     }
   }
 };
@@ -80,6 +81,7 @@ export default {
         top: 60%;
         z-index: -1;
         left: 0;
+        transition: all .2s;
         img {
           width: 100%;
         }
@@ -90,6 +92,10 @@ export default {
     font-size: 1.1rem;
     color: #fff;
     letter-spacing: 1px;
+    transition: all .4s;
+    &:hover{
+      color:rgba(255,255,255,.8);
+    }
   }
 }
 </style>

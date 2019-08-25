@@ -34,7 +34,6 @@
     </div>
   </div>
 </template>
-
 <style lang="scss" scoped>
 @import "../assets/css/varibale"; // 引入全局样式
 .content {
@@ -74,7 +73,7 @@
       background-color: #fff;
       padding: 8rem 20%;
       box-shadow: 0px 0px 10px 2px #bbb;
-      margin-top:-1rem;
+      margin-top: -1rem;
       .main-title {
         text-align: center;
         font-size: 3rem;
@@ -92,7 +91,7 @@
       .img-wapper {
         display: flex;
         justify-content: space-around;
-        margin:6rem 0;
+        margin: 6rem 0;
         .img {
           text-align: center;
           img {
@@ -101,7 +100,7 @@
           .ct {
             color: #000;
             font-size: 1.5rem;
-            margin-top:4rem;
+            margin-top: 4rem;
           }
         }
         .img:nth-child(2) {
