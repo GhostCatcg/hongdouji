@@ -145,13 +145,17 @@ export default {
     },
 
     uploadImg(e, type) {
-      let file = e.target.files[0];
-      if (!/\.(gif|jpg|jpeg|png|GIF|JPG|PNG|JPEG)$/.test(file.name)) {
-        this.alert(this.l.ST_TEXT5);
-        return;
-      }
-      this.images = new FormData(); //创建form对象
-      this.images.append("file", file); //通过append向form对象添加数据
+      // let file = e.target.files[0];
+      // if (!/\.(gif|jpg|jpeg|png|GIF|JPG|PNG|JPEG)$/.test(file.name)) {
+      //   this.alert(this.l.ST_TEXT5);
+      //   return;
+      // }
+      // this.images = new FormData(); //创建form对象
+      // this.images.append("file", file); //通过append向form对象添加数据
+
+
+
+      console.log(e)
     }
   }
 };

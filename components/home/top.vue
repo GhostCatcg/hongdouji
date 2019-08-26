@@ -14,7 +14,7 @@
         </div>
         <div class="QR-wapper">
           <div class="QRcode" v-for="(item, index) in qrcode" :key="index">
-            <div @mouseenter="enter(index)" @mouseleave="leave(index)">
+            <div @mouseenter.native="enter(index)" @mouseleave.native="leave(index)">
               <i :class="item.icon"></i>
               <span>{{item.name}}</span>
             </div>
