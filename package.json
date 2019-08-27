@@ -1,14 +1,14 @@
 {
-  "name":"hdouji",
+  "name": "hdouji",
   "version": "1.0.0",
-"description":"红豆记,红豆记恋爱记录,情侣必备软件,情侣恋爱神器",
+  "description": "红豆记,红豆记恋爱记录,情侣必备软件,情侣恋爱神器",
   "author": "GhostCat",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server --exec babel-node",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production nodemon server/index.js --exec babel-node",
-    "prd":"pm2 start npm --name 'hongdouji' -- run start -i max",
+    "prd": "pm2 start npm --name 'hongdouji' -- run start -i max",
     "generate": "nuxt generate"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
     "koa-multer": "^1.0.2",
     "koa-router": "^7.4.0",
     "koa2-cors": "^2.0.6",
+    "mavon-editor": "^2.7.5",
     "mongoose": "^5.6.5",
     "node-sass": "^4.12.0",
     "nuxt": "^2.0.0",

@@ -1,12 +1,30 @@
 <template>
   <div class="admin" style="height:100%;">
-    <el-table :data="tableData"  style="width: 100%;margin:0 atuo;text-align:center;">
+    <div>
+      <h1>Test Markdown后台发布功能</h1>
+      <div class="mavonEditor">
+        <no-ssr>
+          <mavon-editor :toolbars="markdownOption" v-model="handbook" />
+        </no-ssr>
+      </div>
+    </div>
+
+    <el-table :data="tableData" style="width: 100%;margin:0 atuo;text-align:center;">
       <el-table-column prop="suggest" label="反馈内容" width="180"></el-table-column>
       <el-table-column prop="number" label="手机号" width="180"></el-table-column>
       <el-table-column prop="phone" label="手机系统"></el-table-column>
     </el-table>
   </div>
 </template>
+<style lang="scss">
+.admin{
+  padding-top:8rem;
+}
+.mavonEditor {
+  width: 100%;
+  height: 100%;
+}
+</style>
 <script>
 import axios from "axios";
 export default {
@@ -25,7 +43,12 @@ export default {
   },
   data() {
     return {
-      tableData: []
+      tableData: [],
+      markdownOption: {
+        bold: true // 粗体
+        // ... // 更多配置
+      },
+      handbook: "#### how to use mavonEditor in nuxt.js"
     };
   }
 };
