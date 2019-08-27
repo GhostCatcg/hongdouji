@@ -1,7 +1,7 @@
 <template>
   <div class="admin" style="height:100%;">
     <div>
-      <h1>Test Markdown后台发布功能</h1>
+      <h1 class="title">Test Markdown后台发布功能</h1>
       <div class="mavonEditor">
         <no-ssr>
           <mavon-editor :toolbars="markdownOption" v-model="handbook" />
@@ -17,6 +17,10 @@
   </div>
 </template>
 <style lang="scss">
+.title{
+  text-align:center;
+  font-size: 4rem;
+}
 .admin{
   padding-top:8rem;
 }
