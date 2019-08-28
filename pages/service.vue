@@ -133,7 +133,6 @@ export default {
 
     async send(data) {
       console.log(data);
-      // 上传图片的功能等待更新为 base64
       let jsonRes = await axios.post("https://hdouji.com/upload/json", data);
       // let jsonRes = await axios.post("http://localhost:8080/upload/json", data);
       if (jsonRes.status !== 200) {
