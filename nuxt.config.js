@@ -44,17 +44,21 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: [
-    '@nuxtjs/axios',
-  ],
-  axios: {
-    prefix: '/api/', // 下次一次性更新基础接口地址
-    proxy: true // Can be also an object with default options
-  },
 
-  proxy: {
-    '/api/': { target: 'http://localhost:8080', pathRewrite: { '^/api/': '' } }
-  },
+
+  // modules: [
+  //   '@nuxtjs/axios',
+  // ],
+  // axios: {
+  //   prefix: '/api/', // 下次一次性更新基础接口地址
+  //   proxy: true // Can be also an object with default options
+  // },
+
+  // proxy: {
+  //   '/api/': { target: 'http://localhost:8080', pathRewrite: { '^/api/': '' } }
+  // },
+
+
   /*
   ** Build configuration
   */
