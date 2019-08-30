@@ -37,8 +37,8 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  touch-action: none;
-  min-width: 1280px;
+  // touch-action: none; //禁止手机滚动
+  // min-width: 1280px;
   height:100%;
 }
 #__nuxt,

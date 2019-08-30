@@ -1,5 +1,14 @@
 
 module.exports = {
+  metaInfo: {
+    htmlAttrs: {
+      lang: 'zh',
+      amp: true
+    },
+    bodyAttrs: {
+      class: ['dark-mode', 'mobile']
+    }
+  },
   mode: 'universal',
   /*
   ** Headers of the page

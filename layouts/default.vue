@@ -31,8 +31,6 @@ export default {
 .container {
   height: 100%;
 }
-.header {
-}
 .push,
 .footer {
   height: 125px;
