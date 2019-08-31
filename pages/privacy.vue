@@ -1,70 +1,536 @@
 <template>
   <div class="privacy">
-    <div class="wapper">
-      <div class="title">
-        <h1>红豆记用户隐私协议</h1>
-      </div>
-      <div class="content">
-        <div class="h2">{{title1}}</div>
-        <div class="text">{{con1}}</div>
-        <div class="h2">{{title2}}</div>
-        <div class="con">
-          <div v-for="(item, index) in con2" :key="index">
-            <div class="text">{{item}}</div>
-          </div>
-        </div>
-        <div class="h2">{{title3}}</div>
-        <div class="con">
-          <div v-for="(item, index) in con3" :key="index">
-            <div class="text">{{item}}</div>
-          </div>
-        </div>
-        <div class="h2">{{title4}}</div>
-        <div class="text">{{con4}}</div>
-        <div class="h2">{{title5}}</div>
-
-        <div class="con">
-          <div v-for="(item, index) in con5" :key="index">
-            <div class="text">{{item}}</div>
-          </div>
-        </div>
-        <div class="h2">{{title6}}</div>
-        <div class="con">
-          <div v-for="(item, index) in con6" :key="index">
-            <div class="text">{{item}}</div>
-          </div>
-        </div>
-        <div class="h2">{{title7}}</div>
-        <div class="con">
-          <div v-for="(item, index) in con7" :key="index">
-            <div class="text">{{item}}</div>
-          </div>
-        </div>
-        <div class="h2">{{title8}}</div>
-        <div class="con">
-          <div v-for="(item, index) in con8" :key="index">
-            <div class="text">{{item}}</div>
-          </div>
-        </div>
-        <div class="h2">{{title9}}</div>
-        <div class="con">
-          <div v-for="(item, index) in con9" :key="index">
-            <div class="text">{{item}}</div>
-          </div>
-        </div>
-        <div class="h2">{{title10}}</div>
-        <div class="con">
-          <div v-for="(item, index) in con10" :key="index">
-            <div class="text">{{item}}</div>
-          </div>
-        </div>
-        <div class="h2">{{title11}}</div>
-        <div class="con">
-          <div v-for="(item, index) in con11" :key="index">
-            <div class="text">{{item}}</div>
-          </div>
-        </div>
-      </div>
+     <div>
+        <h2
+            style="color:#333;border-bottom-color:#eeeeee; border-bottom-style:dashed; border-bottom-width:0.75pt; font-size:20pt; line-height:115%; margin:18pt 0pt 0pt; padding-bottom:18pt; text-align:center">
+            <span
+                style="font-family:微软雅黑; font-size:2rem; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">红豆记</span><span
+                style="font-family:微软雅黑; font-size:2rem; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">用户隐私政策</span>
+        </h2>
+        <p style="font-size:14px line-height:115%; margin:2.4pt 0pt 7.2pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px font-style:normal; text-decoration:none; text-transform:none">生效时间：2019年7月</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px font-style:normal; text-decoration:none; text-transform:none">18</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px font-style:normal; text-decoration:none; text-transform:none">日</span>
+        </p>
+        <h3 style="font-size:18px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:宋体; font-size:18px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">引言</span>
+        </h3>
+        <p style="font-size:14px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">（以下简称为“我们”）尊重并保护所有使用</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">平台服务用户的个人隐私权。为同时给您提供更准确、有个性化的服务和更安全的互联网环境，我们依据《中华人民共和国网络安全法》、《信息安全技术
+                个人信息安全规范》（GB/T 35273-2017）以及其他相关法律法规和技术规范对原《</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">用户隐私政策》进行了更新，本次更新的内容较多，进一步明确了收集/使用/对外提供的原则，进一步阐述了关于您个人信息的相关权利等。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">本政策与您所使用的我们的产品与/或服务息息相关，您在下载、安装、启动、浏览、注册、登录、使用我们的产品与/或服务（以下统称“使用我们的产品与/或服务”）时，我们将按照本政策的约定处理和保护您的个人信息。我们尽量以简明扼要的表述向您解释本政策所涉及的技术词汇，以便于您理解。</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">我们特别提请您注意，本政策中与您权益（可能）存在重大关系的条款，已使用加粗字体予以区别，请您重点查阅。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">请在使用/继续使用我们的各项产品与服务前，仔细阅读并充分理解本政策，并在需要时，按照本政策的指引，作出适当的选择。如果您不同意本政策的内容，将可能导致我们的产品与/或服务无法正常运行，或者无法达到我们拟达到的服务效果，您应立即停止访问/使用我们的产品与/或服务。您使用或继续使用我们提供的产品与/或服务的行为，都表示您充分理解和同意本《红豆记用户隐私政策》（包括更新版本）的全部内容。</span>
+        </p>
+        <h3 style="font-size:18px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:宋体; font-size:18px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">关于我们</span>
+        </h3>
+        <p style="font-size:14px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">网站及APP的经营者为</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">豆印</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">有限公司。</span>
+        </p>
+        <h3 style="font-size:18px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:宋体; font-size:18px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">一、我们如何收集和使用您的个人信息</span>
+        </h3>
+        <p style="font-size:14px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">我们会遵循正当、合法、必要的原则，出于本政策所述的以下目的，收集和使用您在使用我们服务过程中主动提供或因使用我们产品和/或服务而产生的个人信息。如果我们要将您的个人信息用于本政策未载明的其它用途，或基于特定目的将收集而来的信息用于其他目的，我们将以合理的方式向您告知，并在使用前再次征得您的同意：</span>
+        </p>
+        <h4 style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">1、</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">账号注册</span>
+        </h4>
+        <p style="font-size:14px; line-height:115%; margin:0pt 0pt 0pt 18pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">1.1</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">当您注册</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">账号时，我们会收集您的</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">【手机号码、昵称、头像（如有）】</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt 18pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">1.2</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">在您注册</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">账号时，收集您的手机号码是为了满足相应法律法规的网络实名制要求，请您谨慎考虑后提供</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">。若您不提供这类信息，您可能无法成功注册</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">账号，无法正常使用我们的服务。</span>
+        </p>
+        <h4 style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">2.</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">向您提供产品和/或服务</span>
+        </h4>
+        <p style="font-size:14px; line-height:115%; margin:0pt 0pt 0pt 18pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">2.1</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">信息浏览、发布、收藏与关注功能。当您成功注册账号后，您可以浏览</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">社区的用户笔记、视频、评论以及</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">商城的商品信息、用户评价；您可以关注其他用户；您可在</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">平台发布文字、图片、视频和评论；您可在</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">平台对别人的笔记或视频使用收藏、点赞等功能；您在商城成功购买商品后，可对相关产品进行评价。为了向您提供我们最核心的信息展示和信息发布服务，我们会收集您的</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">设备型号、设备名称、设备唯一标识符、本机应用列表、浏览器类型和设置、语言设置、操作系统和应用程序版本、登录IP地址、接入网络的方式、网络质量数据、移动网络信息（包括运营商名称）、产品版本号、日志信息（如操作日志、服务日志）</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">等。</span><br /><br /><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">当您使用发布功能时，</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">您发布的文字、照片、评论、点赞、收藏等信息会存储在我们的服务器中</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">，因为存储是实现这一功能所必需的。我们会以加密的方式存储，您也可以随时删除这些信息。
+            </span></p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt 18pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">2.2</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">搜索功能。当您使用</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">搜索功能时，我们会收集</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">您查询的关键词、阅读记录和访问时间、评论和互动记录</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">等。收集此信息可以向您提供您所需要的内容和可能更感兴趣的服务，同时亦可以改进我们的产品和服务；</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt 18pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">2.3</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">定位功能。当您开启设备定位功能并使用</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">基于位置提供的相关服务时，我们会收集有关</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">您的位置信息</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt 18pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">2.4</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">商品购买功能。您可以在</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">商城订购商品/服务。为了帮助您顺利完成交易、保障您的交易安全、查询订单信息、提供物流服务等，在您下单交易或为了完成交易时，我们会收集您的</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">交易商品/服务信息、订单号、交易金额、支付方式、收货人姓名、地址、联系电话</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">等信息。</span><br /><br /><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">当您成功下单后，如商品是第三方商家提供或需要第三方配送的，我们为了准确、安全向您完成货物的交付及配送。商家及第三方配送公司在发货及配送环节内不可避免地会获知您的相关配送信息。我们向您承诺，我们会以最大努力保障您的个人信息安全，我们会严格要求商家及第三方配送公司对您的个人信息保密，只以配送之目的获悉和使用，不得对外泄露或做其他任何用途。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt 18pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">2.5</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">客服和售后服务功能。当您联系我们的客服或提出我们的产品与/或服务的售后申请时，为了您的账号与系统安全，我们可能需要您提供相关个人信息与您之前提供的个人信息相匹配以验证您的用户身份。验证成功后，我们可能会收集您与我们的沟通信息（例如：账号信息、订单信息、您为了证明相关事实而提供的图片/视频/文字信息等）、您的联系方式以及您与我们的沟通记录，包括线上沟通记录、电话录音等，以便尽快为您解决问题和改进我们的产品与/或服务。
+            </span></p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt 18pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">2.6</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">支付功能。您可以在</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">购买商品/服务以及</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">服务。在您使用该功能的过程中可能会需要进行支付，在支付过程中，我们可能会收集</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">您的第三方支付账号</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">（例如支付宝账号、微信账号、银联账号）。
+            </span></p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt 18pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">2.7</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">身份认证功能。当您使用</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">认证功能时，</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">为证实您的个人身份，我们可能会收集您的身份信息，包括您的真实姓名、身份证号码、人像照片信息。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt 18pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">2.8</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">为保证您能正常使用</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">或其关联公司移动客户端软件的全部功能（包括但不限于您在使用</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">平台服务时能够与后台服务器保持即时通信、您能够及时收到个性化内容推送等），</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">可能会i）</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">向您获取及调用您的开机广播用于启动</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">或其关联公司移动客户端软件，</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">ii）</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">采用第三方消息推送服务为您生成标识ID用于区分您的设备的唯一性。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt 18pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">2.9</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">线下服务功能。当您使用</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">线下所提供的服务时，为了能够给您提供更加个性化的服务内容和改善</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">的产品与服务，我们可能会收集</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">您的面部识别信息。</span>
+        </p>
+        <h4 style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">3</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">我们可能从第三方间接获取您的个人信息</span>
+        </h4>
+        <p style="font-size:14px; line-height:115%; margin:0pt 0pt 0pt 18pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">3.1</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">如您使用第三方平台的账号登录时，经过您的账号绑定授权，</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">第三方平台会同步一部分信息给我们，如手机号、头像、昵称或ID。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt 18pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">3.2</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">请您知悉，您向外部第三方提供的个人信息，或外部第三方收集的您的个人信息，我们无法获取，更不会使用非常规方式盗取您的个人信息。如果因业务发展的必要而需要从第三方间接收集（如共享等）您的个人信息的，且由我们直接或间接（联合）为您提供产品或服务的，我们（或第三方）在收集前会向您明示共享的您个人信息的来源、类型、使用目的、方式和所用于的业务功能、授权同意范围（如果使用方式和范围超出您在第三方原授权范围的，我们会再次征得您的授权同意），包括</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">您通过第三方账户直接登录我们的产品与/或服务时，我们从第三方获取的您授权共享的账户信息（包括头像、昵称）、我们的某些产品/服务由业务合作伙伴提供或者我们与业务合作伙伴共同提供时，为了必要/合理的业务的顺利开展，我们从部分业务合作伙伴处间接收集的您的部分信息、其他方使用我们的产品与/或服务时所提供有关您的信息（包括发布的与您相关的内容，包括笔记、评论、图片、照片、视频）。</span>
+        </p>
+        <h4 style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">4.</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">征得授权同意的例外</span>
+        </h4>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">根据相关法律法规的规定，在以下情形中，我们可以在不征得您的授权同意的情况下收集、使用一些必要的个人信息：</span>
+        </p>
+        <ol type="1" style="margin:0pt; padding-left:0pt">
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:0pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">与国家安全、国防安全直接相关的；</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">与公共安全、公共卫生、重大公共利益直接相关的；</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">与犯罪侦查、起诉、审判和判决执行等直接相关的；</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">出于维护您或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">所收集的个人信息是您自行向社会公众公开的；</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">从合法公开披露的信息中收集到您的个人信息，如从合法的新闻报道、政府信息公开等渠道；</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">根据您与平台签署的在线协议或合同所必需的；</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">用于维护我们产品和/或服务的安全稳定运行所必需的，例如发现、处置产品或服务的故障；</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">法律法规规定的其他情形。</span>
+            </li>
+        </ol>
+        <p style="font-size:18px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:18px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">二、我们如何共享、转让、公开披露您的个人信息</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:0pt 0pt 10pt; orphans:0; text-align:justify; widows:0"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">1.</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">共享</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">对于您的个人信息，我们不会与任何公司、组织和个人进行共享，除非存在以下一种或多种情形：</span>
+        </p>
+        <ol type="1" style="margin:0pt; padding-left:0pt">
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:0pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">事先已得到您的授权；</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">您自行提出的；</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">按照法律规定、司法机关或行政机关要求的情形；</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">与商业合作伙伴的必要共享：</span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">
+                </span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">您理解并知悉，为了向您提供更完善、优质的产品和服务，我们将授权合作伙伴为您提供部分服务。此种情形下，我们可能会与合作伙伴共享您的某些个人信息，以提供更好的客户服务和用户体验。请您注意，我们仅会出于合法、正当、必要、特定、明确的目的共享您的个人信息，并且只会共享提供服务所必要的个人信息。同时，我们会与合作伙伴签署严格的保密协定，要求他们按照我们的说明、本政策以及其他任何相关的保密和安全措施来处理您的个人信息。我们的合作伙伴无权将共享的个人信息用于任何其他用途。我们将对信息数据的输出形式、流转、使用等做安全评估与处理等。</span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">
+                    目前，我们的授权合作伙伴包括以下类型： </span>
+                <ol type="1" style="margin:0pt; padding-left:0pt">
+                    <li
+                        style="font-family:Calibri; font-size:12pt; line-height:115%; margin:0pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                        <span
+                            style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">平台的第三方商家：为帮助您实现产品或服务的购买或者为您提供售后服务，我们会与平台的第三方商家共享您的订单和交易相关信息。
+                        </span></li>
+                    <li
+                        style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                        <span
+                            style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">服务供应商：例如为您提供支付服务的支付机构、为您提供一键登录服务的通讯运营商、第三方物流公司、系统技术服务商等。
+                        </span></li>
+                    <li
+                        style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                        <span
+                            style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">数据服务供应商：包括网络广告监测、数据统计/分析的合作伙伴。为维护/改进我们的产品/服务、为您提供更好的内容，我们可能会与提供该服务的指定合作伙伴共享您的相关信息（例如：广告播放/展示记录、视频播放记录、设备型号、设备所在地等）。请您知悉，为了您的信息安全，我们目前仅与已签署严格数据安全保密协议的合作伙伴进行合作；
+                        </span></li>
+                    <li
+                        style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                        <span
+                            style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">其他业务合作伙伴：例如：委托我们进行推广和广告投放的合作伙伴等。您授权我们有权与委托我们进行推广和广告投放的合作伙伴共享我们使用您的相关信息集合形成的</span><span
+                            style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">间接用户画像、去标识化或匿名化处理后的分析/统计类信息</span><span
+                            style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">，以帮助其进行广告或决策建议、提高广告有效触达率、进一步了解用户需求。</span><span
+                            style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">但我们承诺：未经您的同意，我们不会与其共享可以识别您身份的个人信息；</span>
+                    </li>
+                </ol>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">与我们的关联公司必要共享：我们可能会与我们的关联公司共享您的个人信息。我们只会共享必要的个人信息，且这种共享受本政策所声明的目的的约束。关联公司如要改变个人信息的处理目的，将再次征得您的授权和同意；</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">您可以基于</span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">平台与第三人（包括不特定对象）共享您的个人信息或其他信息，但因您的共享行为而导致的信息泄露、被使用等情况，与</span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">无关，</span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">不因此承担法律责任。</span>
+            </li>
+        </ol>
+        <ol start="2" type="1" style="margin:0pt; padding-left:0pt">
+            <li
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-weight:bold; line-height:115%; list-style-position:inside; margin:0pt 0pt 10pt; orphans:0; text-align:justify; text-indent:0pt; widows:0">
+                <span style="font:7.0pt 'Times New Roman'">&#xa0; </span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">转让：</span>
+            </li>
+        </ol>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">转让是指将取得您个人信息的控制权转让给其他公司、组织或个人。除非获取您的明确同意，否则我们不会将您的个人信息转让给任何公司、组织或个人。但下述情形除外：</span>
+        </p>
+        <ol type="1" style="margin:0pt; padding-left:0pt">
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:0pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">事先已征得您的同意；</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">您自行提出的；</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">如果公司发生合并、收购或破产清算，将可能涉及到个人信息转让，此种情况下我们会要求新的持有您个人信息的公司、组织继续受本政策的约束。否则我们将要求其重新获取您的明示同意。</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">其他法律法规规定的情形。</span>
+            </li>
+        </ol>
+        <ol start="3" type="1" style="margin:0pt; padding-left:0pt">
+            <li
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-weight:bold; line-height:115%; list-style-position:inside; margin:0pt 0pt 10pt; orphans:0; text-align:justify; text-indent:0pt; widows:0">
+                <span style="font:7.0pt 'Times New Roman'">&#xa0; </span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">公开披露：</span>
+            </li>
+        </ol>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">公开披露是指向社会或不特定人群发布信息的行为。除了因公布账号中奖、处罚通知时展示相关脱敏信息或者取得您的明确同意而进行必要的公开披露外，我们不会对您的个人信息进行披露。但下述情况除外：</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">1）</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">基于法律规定、司法机关或行政机关强制性要求的情况下，我们可能会向有权机关披露您的个人信息。但我们保证，在上述情况发生时，我们会要求披露请求方必须出具与之相应的有效法律文件，并对被披露的信息采取符合法律和业界标准的安全防护措施。</span>
+        </p>
+        <h4 style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:宋体; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">4.</span><span
+                style="color:#333333; font-family:宋体; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">共享、转让、公开披露个人信息授权同意的例外情形：</span>
+        </h4>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">根据相关法律法规的规定，在以下情形中，我们可以在不征得您的授权同意的情况下共享、转让、公开披露您的个人信息：</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:0pt; text-indent:20pt"><span
+                style="font-family:Calibri; font-size:12pt">1</span><span
+                style="font-family:宋体; font-size:12pt">．</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">与公共安全、公共卫生、重大公共利益有关的；</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt; text-indent:20pt"><span
+                style="font-family:Calibri; font-size:18px">2</span><span
+                style="font-family:宋体; font-size:18px">．</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">与犯罪侦查、起诉、审判和判决执行等有关的；</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt; text-indent:20pt"><span
+                style="font-family:Calibri; font-size:18px">3</span><span
+                style="font-family:宋体; font-size:18px">．</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">出于维护您或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt; text-indent:20pt"><span
+                style="font-family:Calibri; font-size:18px">4</span><span
+                style="font-family:宋体; font-size:18px">．</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">您自行向社会公众公开的个人信息；</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt; text-indent:20pt"><span
+                style="font-family:Calibri; font-size:18px">5</span><span
+                style="font-family:宋体; font-size:18px">．</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">从合法公开披露的信息中收集到的个人信息的，如合法的新闻报道、政府信息公开等渠道。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:9pt 0pt 0pt; text-indent:20pt"><span
+                style="font-family:Calibri; font-size:18px">6</span><span
+                style="font-family:宋体; font-size:18px">．</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">法律法规规定的其他情形。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:0pt 0pt 0pt 36pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">根据法律规定，共享、转让经去标识化处理的个人信息，且确保数据接收方无法复原并重新识别个人信息主体的，不属于个人信息的对外共享、转让及公开披露行为，对此类数据的保存及处理将无需另行向您通知并征得您的同意。</span>
+        </p>
+        <p
+            style="font-size:18px; line-height:115%; margin:0pt 0pt 10pt; orphans:0; text-align:justify; text-indent:0pt; widows:0">
+            <span style="color:#333333; font-family:微软雅黑; font-size:18px; font-weight:bold">3、</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:18px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">我们如何存储和保护您的个人信息</span>
+        </p>
+        <ol type="1" style="margin:0pt; padding-left:0pt">
+            <li
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-weight:bold; line-height:115%; list-style-position:inside; margin:0pt 0pt 10pt; orphans:0; text-align:justify; text-indent:0pt; widows:0">
+                <span style="font:7.0pt 'Times New Roman'">&#xa0; </span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">存储：</span>
+            </li>
+        </ol>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">存储地点：我们将从中华人民共和国境内获得的信息存放于中华人民共和国境内。如果发生数据的跨境传输，我们会单独向您以站内通知或邮件的方式告知您数据出境的目的、接收方等，并征得您的授权同意，我们会确保数据接收方有充足的数据保护能力来保护您的个人信息。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">存储时间：我们承诺始终按照法律的规定在合理必要期限内在存储您个人信息。</span>
+        </p>
+        <ol start="2" type="1" style="margin:0pt; padding-left:0pt">
+            <li
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-weight:bold; line-height:115%; list-style-position:inside; margin:0pt 0pt 10pt; orphans:0; text-align:justify; text-indent:0pt; widows:0">
+                <span style="font:7.0pt 'Times New Roman'">&#xa0; </span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">
+                </span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">保护：</span>
+            </li>
+        </ol>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">为了保护您的个人信息安全，我们将努力采取各种符合行业标准的安全措施来保护您的个人信息以最大程度降低您的信息被毁损、盗用、泄露、非授权访问、使用、披露和更改的风险。我们将积极建立数据分类分级制度、数据安全管理规范、数据安全开发规范来管理规范个人信息的存储和使用，确保未收集与我们提供的服务无关的个人信息。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">您的账户均有安全保护功能，请妥善保管您的账户及密码信息。</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">将通过向其它服务器备份、对用户密码进行加密等安全措施确保您的信息不丢失，不被滥用和变造。尽管有前述安全措施，但同时也请您注意在信息网络上不存在“完善的安全措施”。为防止安全事故的发生，我们已按照法律法规的规定，制定了妥善的预警机制和应急预案。同时，我们还将按照监管部门要求，主动上报个人信息安全事件的处置情况，紧密配合政府机关的工作。</span>
+        </p>
+        <h3 style="font-size:18px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:宋体; font-size:18px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">四、您如何管理您的信息</span>
+        </h3>
+        <p style="font-size:14px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">您可以对自己个人信息访问、更正、删除的权利。您可通过【设置-个人资料】访问、更正自己的个人资料；可通过【设置-账号与安全】设置、访问、更正账号信息；可通过【设置-隐私】设置、访问、更正隐私信息。您可通过【我-笔记/收藏/赞过】访问、更正、删除相关信息。您可通过【设置-账号与安全/新消息通知/隐私/通用】变更授权范围。</span>
+        </p>
+        <h3 style="font-size:18px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:宋体; font-size:18px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">五、您如何注销您的账号</span>
+        </h3>
+        <p style="font-size:14px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">您可以通过【客服与帮助-社区问题-账号问题-如何注销账号】，在满足账号注销的条件下选择【申请注销账号】，来注销您的账号；账号注销后，除法律明确规定必须由我们保留的个人信息外（如您在红豆记交易相关的信息），您的个人信息将会从红豆记移除。</span>
+        </p>
+        <h3 style="font-size:18px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:宋体; font-size:18px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">六、我们如何使用Cookie和其他同类技术</span>
+        </h3>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">1.</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">在您未拒绝接受cookies的情况下，</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">会在您的计算机以及相关移动设备上设定或取用cookies，以便您能登录或使用依赖于cookies的</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">平台服务或功能。</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">使用cookies可为您提供更加周到的个性化服务，包括推广服务。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">2.</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">您有权选择接受或拒绝接受cookies。您可以通过修改浏览器设置的方式或在移动设备中设置拒绝接受cookies。但如果您选择拒绝接受cookies，则您可能无法登录或使用依赖于cookies的</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">平台服务或功能。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">3.</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">通过</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">所设cookies所取得的有关信息，将适用本政策。</span>
+        </p>
+        <h3 style="font-size:18px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:18px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">七、我们如何更新隐私政策</span>
+        </h3>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">1.</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">我们保留不时更新或修订本隐私政策的权利。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">2.</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">如遇本隐私政策更新，我们会通过APP客户端推送通知等合理方式通知您，以便您能及时了解本隐私政策所做的任何变更。</span>
+        </p>
+        <h3 style="font-size:18px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:18px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">八、未成年人保护</span>
+        </h3>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">1.</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">若用户是未满18周岁的未成年人，应在监护人监护、指导并获得监护人同意情况下阅读本协议和使用</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">相关服务。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">2.</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">本公司重视对未成年人个人信息的保护，未成年用户在填写个人信息时，请加强个人保护意识并谨慎对待，请在监护人指导时正确使用</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">红豆记</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">相关服务。</span>
+        </p>
+        <p style="font-size:14px; line-height:115%; margin:0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">3.</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">若您是未成年人的监护人，当您对您所监护的未成年人使用我们的服务或其向我们提供的用户信息有任何疑问时，请您及时与我们联系。我们将根据国家相关法律法规及本政策的规定保护未成年人用户信息的保密性及安全性。如果我们发现自己在未事先获得可证实的父母或法定监护人同意的情况下收集了未成年人的个人信息，则会设法尽快删除相关数据。</span>
+        </p>
+        <h3 style="font-size:18px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:宋体; font-size:18px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">九、如何联系我们</span>
+        </h3>
+        <p style="font-size:14px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">当您对本政策有任何疑问，可以发送邮件至</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">【</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">hongdou</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">@</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">hdouji</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">.com
+                】</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">联系我们。</span>
+        </p>
+        <h3 style="font-size:18px; line-height:115%; margin:24pt 0pt 0pt"><span
+                style="color:#333333; font-family:宋体; font-size:18px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">十、其他</span>
+        </h3>
+        <ol type="1" style="margin:0pt; padding-left:0pt">
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:24pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">因本政策以及我们处理您个人信息事宜引起的任何争议，您可诉至</span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">杭州市下沙经济技术开发区</span><span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">人民法院。</span>
+            </li>
+            <li
+                style="font-family:Calibri; font-size:12pt; line-height:115%; margin:9pt 0pt 0pt 32.11pt; padding-left:3.89pt; text-indent:0pt">
+                <span
+                    style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">如果您认为我们的个人信息处理行为损害了您的合法权益，您也可向有关政府部门进行反映。</span>
+            </li>
+        </ol>
+        <p style="font-size:18px; line-height:115%; margin:9pt 0pt 0pt"><span
+                style="font-family:Calibri; font-size:18px">&#xa0;</span></p>
+        <p style="font-size:18px; line-height:115%; margin:9pt 0pt 0pt"><span
+                style="font-family:Calibri; font-size:18px">&#xa0;</span></p>
+        <p style="font-size:18px; line-height:115%; margin:9pt 0pt 0pt"><span
+                style="font-family:Calibri; font-size:18px">&#xa0;</span></p>
+        <p style="font-size:14px; line-height:115%; margin:0pt 0pt 10pt; orphans:0; text-align:justify; widows:0"><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">&#xa0;</span>
+        </p>
     </div>
   </div>
 </template>
@@ -75,97 +541,18 @@ export default {
   layout: "none", // 切换另一个布局
   data() {
     return {
-      title1: "一.协议条款的确认及接受",
-      con1:
-        '红豆记（包括网址为www.hdouji.com的网站，以及可在IOS 系统及Android 系统中运行的名为“红豆记”的应用程序，以下简称"本网站"或“红豆记”）由豆印有限公司（包括其关联机构，以下合称“本公司”）运营并享有完全的所有权及知识产权等权益，本网站提供的服务将完全按照其发布的条款和操作规则严格执行。您确认同意本协议（协议文本包括《红豆记用户注册协议》、《红豆记用户隐私政策》、《红豆记社区规范》，三者乃不可分割的整体，具有同等法律效力，共同构成用户使用本网站及相关服务的整体协议，以下合称“本协议”）所有条款并完成注册程序时，本协议在您与本公司间成立并发生法律效力，同时您成为本网站正式用户。',
-      title2: "二.账号注册及使用规则",
-      con2: [
-        `2.1用户注册成功后，红豆记将给予每个用户一个用户帐号及相应的密码，该用户帐号和密码由用户负责保管；用户应当对以其用户帐号进行的所有活动和事件负法律责任。`,
-        `2.2用户须对在红豆记的注册信息的真实性、合法性、有效性承担全部责任，用户不得冒充他人（包括但不限于冒用他人姓名、名称、字号、头像等足以让人引起混淆的方式）开设账号；不得利用他人的名义发布任何信息；不得恶意使用注册帐户导致其他用户误认；否则红豆记有权立即停止提供服务，收回其帐号并由用户独自承担由此而产生的一切法律责任。`,
-        `2.3用户理解且确认，其在红豆记注册账号的所有权及有关权益均归本公司所有，用户完成注册手续后仅享有该账号的使用权。您的账号仅限于您本人使用，未经本公司书面同意，禁止以任何形式赠与、借用、出租、转让、售卖或以其他方式许可他人使用该账号。如果本公司发现或者有合理理由认为使用者并非账号初始注册人，公司有权在未通知您的情况下，暂停或终止向该注册账号提供服务，并有权注销该账号，而无需向注册该账号的用户承担法律责任。 `,
-        `2.4为了充分使用账号资源，如用户在注册后未及时进行初次登录使用或连续超过二个月未登录账号并使用等情形，本公司有权收回用户的注册账号。 `,
-        `2.5用户承诺不得以任何方式利用红豆记直接或间接从事违反中国法律、以及社会公德的行为，红豆记有权对违反上述承诺的内容予以删除。`,
-        `2.6用户不得利用本网站制作、上载、复制、发布、传播或者转载如下内容： （1）反对宪法所确定的基本原则的；（2）危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；（3）损害国家荣誉和利益的；（4）煽动民族仇恨、民族歧视，破坏民族团结的；（5）破坏国家宗教政策，宣扬邪教和封建迷信的；（6）散布谣言，扰乱社会秩序，破坏社会稳定的；（7）散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；（8）侮辱或者诽谤他人，侵害他人合法权益的；（9）含有法律、行政法规禁止的其他内容的信息。`,
-        `2.7红豆记鼓励用户充分利用红豆记平台自由地发布和共享自己的信息，用户对于其创作并在红豆记上发布的合法内容（包括但不限于文字、图片、视频、音频等）依法享有著作权。用户不应通过红豆记发布他人受知识产权法律等保护的内容，除非获得他人的合法授权。就用户发布的内容，若第三方向红豆记投诉并提交初步证据，经红豆记判断投诉属实的，红豆记将会删除这些内容。如因用户发布的内容给红豆记带来损失的，用户应当负责赔偿。（关于用户在红豆记发布内容的具体规范，请查阅《红豆记社区规范》）。 `,
-        `2.8红豆记有权对用户使用红豆记的情况进行审查和监督，如用户在使用红豆记时违反任何上述规定，红豆记或其授权的人有权要求用户改正或直接采取一切必要的措施（包括但不限于更改或删除用户张贴的内容、暂停或终止用户使用红豆记的权利）以减轻用户不当行为造成的影响。 `
-      ],
-      title3: "三.服务内容",
-      con3: [
-        `3.1本网站的服务具体内容根据实际情况提供，红豆记保留变更、中断或终止部分或全部服务的权利。红豆记不承担因业务调整给用户造成的损失。除非本协议另有其它明示规定，增加或强化目前本网站的任何新功能，包括所推出的新产品，均受到本协议之规范。用户了解并同意，本网站服务仅依其当前所呈现的状况提供，对于任何用户通讯或个人化设定之时效、删除、传递错误、未予储存或其它任何问题，红豆记均不承担任何责任。`,
-        `3.2红豆记在提供服务时，可能会对部分服务的用户收取一定的费用。在此情况下，红豆记会在相关页面上做明确的提示。如用户拒绝支付该等费用，则不能使用相关的服务。`,
-        `3.3用户理解，红豆记仅提供相关的服务，除此之外与相关服务有关的设备（如电脑、调制解调器及其他与接入互联网有关的装置）及所需的费用（如为接入互联网而支付的电话费及上网费）均应由用户自行负担。`,
-        `3.4红豆记提供的服务内容可能包括：文字、软件、声音、图片、视频、图表等。所有这些内容受著作权、商标和其它财产所有权法律的保护。用户只有在获得红豆记或其他相关权利人的授权之后才能使用这些内容，不能擅自复制、再造这些内容、或创造与内容有关的派生产品。`,
-        `3.5红豆记会员服务`,
-        `3.5.1红豆记会员，是指在红豆记具有良好消费记录的个人注册用户根据红豆记公布的收费标准支付相应的费用后获取的特殊资格。以下称“会员”。`,
-        `3.5.2会员服务，指会员享有的特殊服务，包括以相对优惠的价格购买指定商品（即会员专享价），以及其他由红豆记明示的优惠措施。用户开通会员服务时，须按照红豆记公布的收费标准支付相应的会员服务费用。基于业务的发展，红豆记有权调整收费标准，调整后的收费标准自公布之日起生效。`,
-        `3.5.3会员知悉并确认，当开通会员服务后，若您中途取消服务或终止资格的，红豆记将不退还您已支付的会员服务费用。`,
-        `3.5.4使用会员服务过程中，您应当是具备完全民事权利能力和完全民事行为能力的自然人、法人或其他组织。若您不具备前述主体资格，则您及您的监护人应当承担因此而导致的一切后果，红豆记有权向您的监护人追偿。`,
-        `3.5.5您知悉并同意，红豆记有权通邮件、短信等方式，向您发送会员相关活动的信息；`,
-        `3.5.6您确认会员服务仅限您本人使用，同时，您保证，您将合理使用会员服务，不会利用会员服务非法获利，不以任何形式转让您所享有的会员服务，不以任何形式将您所享有的会员服务借给他人使用，如红豆记有合理理由怀疑您存在不当使用会员服务时，红豆记有权取消您的会员资格且不退还您支付的会员服务费用，因此产生的相关责任及损失均由您自行承担，给红豆记造成损失的，红豆记保留向您追偿的权利。`,
-        `3.5.7红豆记保留在法律法规允许的范围内自行决定是否接受您的会员服务申请、调整会员服务内容、取消会员资格等权利。`,
-        `3.6商品/服务的购买与评价`,
-        `3.6.1您可以通过红豆记商城购买红豆记或者第三方商家为您提供的商品/服务，商品/服务来源以是否标注“自营”予以区分。`,
-        `3.6.2您在红豆记下订单时，请您仔细确认所购商品的名称、价格、数量、型号、规格、尺寸、联系地址、电话、收货人等信息。收货人与您本人不一致的，收货人的行为和意思表示视为您的行为和意思表示，您应对收货人的行为及意思表示的法律后果承担连带责任。`,
-        `3.6.3您理解并同意：红豆记上展示的商品/服务和价格等信息为向您发出的要约。您下单时须填写您希望购买的商品/服务数量、价款及支付方式、收货人、联系方式、收货地址等内容；付款及订单提交成功前，您有权修改所填信息。付款及订单提交成功后，将视您与销售商之间就您购买的商品/服务成立了合同关系，销售商会按照您在订单中订购的商品/服务进行发货。 `,
-        `3.6.4尽管销售商做出最大的努力，但由于市场变化及各种以合理商业努力难以控制因素的影响，本软件无法避免您提交的订单信息中的商品出现缺货情况；如您下单所购买的商品发生缺货，您有权取消订单以解除电子合同，销售商在取得您同意的前提下可以取消订单以解除电子合同，若您已经付款，则为您办理退款。 `,
-        `3.6.5用户有权在红豆记提供的评价系统中对与其达成交易的商品/服务进行评价。用户的评价内容应当客观真实，不应包含任何污言秽语、色情低俗、恶意贬低及法律法规与本协议列明的其他禁止性信息；用户不应以不正当方式帮助商家提升销量、信用或利用评价权利对相关商家进行恐吓、敲诈勒索等违法行为。红豆记可按照本协议及相关法律法规的规定对用户实施上述行为所产生的评价信息进行删除或屏蔽 `
-      ],
-      title4: "四.知识产权",
-      con4: `本公司在“红豆记”软件及相关服务中提供的内容（包括但不限于软件、技术、程序、网页、文字、图片、图像、商标、标识、音频、视频、图表、版面设计、电子文档等）的知识产权属于本公司所有。同时本公司提供服务所依托的软件的著作权、专利权、商标及其他知识产权均归本公司所有。未经本公司许可，任何人不得擅自使用（包括但不限于通过任何机器人、蜘蛛等程序或设备监视、复制、传播、展示、镜像、上载、下载“红豆记”软件及相关服务中的内容）。`,
-      title5: "五.用户授权及隐私保护",
-      con5: [
-        `5.1用户知悉、理解并同意其通过红豆记发布上传的内容，授权本公司及其关联公司、控制公司可在全球范围内、免费、非独家、可转授权地使用，使用范围包括但不限于在当前或其他网站、应用程序、产品或终端设备等，并授权公司及其关联公司、控制公司对相应内容可进行修改、复制、改编、翻译、汇编或制作衍生产品。 `,
-        `5.2用户确认并同意授权本公司以公司名义或委托专业第三方对侵犯用户上传发布的享有知识产权的内容进行代维权，维权形式包括但不限于：监测侵权行为、发送维权函、提起诉讼或仲裁、调解、和解等，本公司有权对维权事宜做出决策并独立实施。 `,
-        `5.3保护用户隐私是红豆记的一项基本政策，红豆记保证不对外公开或向第三方提供用户注册资料及用户在使用本网站服务时存储在红豆记的非公开内容，但下列情况除外： （1）事先获得用户的明确授权；（2）根据有关的法律法规要求；（3）按照相关政府主管部门的要求；（4）为维护社会公众的利益；（5）维护红豆记的合法权益。`,
-        `5.4在获得您授权的情况下，红豆记可能会与第三方合作向用户提供相关的服务，在此情况下，如该第三方同意承担与红豆记同等的保护用户隐私的责任，则红豆记可将用户的注册资料等提供给该第三方。 `,
-        `5.5在不透露单个用户隐私资料的前提下，红豆记有权对整个用户数据库进行分析并对用户数据库进行商业上的利用。`,
-        `5.6红豆记将采取先进的技术手段、严密的内控制度等保护用户的隐私信息，关于用户隐私信息的收集、使用、存储及披露等，详见《红豆记用户隐私政策》。`,
-        `5.7用户关注信息公开：红豆记提供的某些服务项目中有“关注”功能，用户选择“关注”后，可以在“我的关注”中查看自己关注的信息，包括关注的“用户”、“商家”、“标签”、“专辑”等，用户须知，红豆记平台对用户关注的项目是公开的，即其他用户可以查看到该用户关注的项目。另外用户可以在“设置”-“隐私设置”中调整“评论设置”、“通讯录设置”“微博设置”等，自行调整评论、以及添加好友的方式等。 `,
-        `5.8用户可以向红豆记申请注销账户。用户注销账户后，红豆记将停止为其提供产品/服务，并依据用户的要求，除法律法规另有规定外，红豆记将删除其在红豆记平台上的个人信息。`
-      ],
-      title6: "六.免责声明",
-      con6: [
-        `6.1用户将照片、个人信息等资料上传到互联网上，有可能会被其他组织或个人复制、转载、擅改或做其它非法用途，用户必须充分意识此类风险的存在。用户明确同意其使用红豆记服务所存在的风险（包括但不限于受到第三方侵权或对第三方造成侵权）完全由其自己承担；因其使用红豆记服务而产生的一切后果也由其自己承担，红豆记对此不承担任何责任。 `,
-        `6.2红豆记不担保本网站服务一定能满足用户的要求，也不担保本网站服务不会中断，对本网站服务的及时性、安全性、准确性、真实性、完整性也都不作担保。`,
-        `6.3对于因不可抗力或红豆记不能控制的原因造成的本网站服务中断或其它缺陷，红豆记不承担任何责任，但红豆记将尽力减少因此而给用户造成的损失和影响。`,
-        `6.4根据有关法律法规，红豆记在此郑重提请用户注意，红豆记作为信息存储空间及网络交易平台的提供者，任何经由本网站以上载、张贴、发送电子邮件或任何其它方式传送的资讯、资料、文字、软件、音乐、音讯、照片、图形、视讯、信息或其它资料（以下简称“内容”），无论系公开还是私下传送，均由内容提供者承担责任。红豆记无法控制经由本网站传送之内容，因此不保证内容的正确性、完整性或品质。在任何情况下，红豆记均不为任何内容负责，包含但不限于任何内容之任何错误或遗漏，以及经由本网站服务以张贴、发送电子邮件或其它方式传送任何内容而衍生之任何损失或损害。但红豆记有权依法停止传输任何前述内容并采取相应行动，包括但不限于暂停用户使用本网站服务的全部或部分，保存有关记录，并向有关机关报告。`,
-        `6.5红豆记作为网络服务提供者，对非法转载，虚假发布、盗版行为的发生不具备充分的监控能力。红豆记对他人在网站上实施的此类侵权行为不承担法律责任，侵权的法律责任概由本人承担。`
-      ],
-      title7: "七.使用TalkingData分析服务详述",
-      con7: [
-        `7.1TalkingData为移动应用提供数据统计分析服务，通过您在应用中集成了TalkingData数据SDK或API后，您的应用将通过技术手段收集和传送您终端用户的相关数据，通过我们的服务来分析这些数据以了解您的应用在不同终端设备上、使用平台或应用分发渠道的表现和用户使用的情况。 `,
-        `7.2您终端用户的数据通常包括但不限于：SDK或API版本、平台、时间戳、应用标识符、应用程序版本、应用分发渠道、iOS供应商标识符（IDFV)、iOS广告标识符（IDFA)、安卓广告主标识符、网卡（MAC)地址、国际移动设备识别码（IMEI）、设备型号、终端制造厂商、终端设备操作系统版本、会话启动/停止时间、语言所在地、移动网络/国家代码、时区和网络状态（WiFi等）、硬盘、CPU和电池使用情况等。 `,
-        `7.3根据您移动应用的类型和和您对统计分析选项的要求，您终端用户的数据还有可能包括：使用者性别、年龄、地理位置、用户触发特定事件、错误报告和页面浏览量等等。 `,
-        `7.4为实现分析服务之目的，TalkingData分析服务将通过您的应用将上述数据发送到TalkingData的服务器上，由TalkingData以聚合性数据和分析报表的形式展现，您可以通过登陆在我们网站中的账户查阅相关统计和分析结果。`
-      ],
-      title8: "八.违约责任",
-      con8: [
-        `8.1针对用户违反本协议或其他服务条款的行为，本公司有权独立判断并视情况采取预先警示、拒绝发布、立即停止传输信息、删除跟帖、短期禁止发言、限制账号部分或者全部功能直至永久关闭账号等措施。本公司有权公告处理结果，且有权根据实际情况决定是否恢复使用。对涉嫌违反法律法规、涉嫌违法犯罪的行为将保存有关记录，并依法向有关主管部门报告、配合有关主管部门调查。`,
-        `8.2因用户违反本协议或其他服务条款规定，引起第三方投诉或诉讼索赔的，用户应当自行承担全部法律责任。因用户的违法或违约行为导致公司及其关联公司、控制公司向任何第三方赔偿或遭受国家机关处罚的，用户还应足额赔偿公司及其关联公司、控制公司因此遭受的全部损失。`
-      ],
-      title9: "九.未成年人使用条款",
-      con9: [
-        `9.1若用户是未满18周岁的未成年人，应在监护人监护、指导并获得监护人同意情况下阅读本协议和使用红豆记相关服务。`,
-        `9.2本公司重视对未成年人个人信息的保护，未成年用户在填写个人信息时，请加强个人保护意识并谨慎对待，请在监护人指导时正确使用红豆记相关服务。`,
-        `9.3未成年用户理解如因用户违反法律法规、本协议内容，则用户及用户的监护人应依照法律规定承担因此而导致的一切后果。`
-      ],
-      title10: "十.协议修改",
-      con10: [
-        `10.1红豆记有权根据法律、国家有权机构或公司经营要求修改本协议的有关条款，红豆记将会通过适当方式在网站上予以公示。`,
-        `10.2如果不同意红豆记对本协议相关条款所做的修改，用户有权停止使用本网站服务。如果用户继续使用本网站服务，则视为用户接受红豆记对本协议相关条款所做的修改。`
-      ],
-      title11: "十一.法律管辖适用及其他",
-      con11: [
-        `11.1如您与本公司就本协议的订立、执行和解释及争议的解决均应适用中华人民共和国（不包括香港、澳门特别行政区，以及台湾地区）法律。如双方就本协议内容或其执行发生任何争议，双方应尽力友好协商解决；协商不成时，任何一方均应向上海市黄浦区人民法院提起诉讼。 `,
-        `11.2如果本协议中任何一条被视为废止、无效或因任何理由不可执行，该条应视为可分的且并不影响任何其余条款的有效性和可执行性。`
-      ]
-    };
+    
+    }
+      
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
-
+span,
+p{
+  line-height: 1.5;
+}
 .privacy {
   padding: 4rem 10%;
   .h2 {
@@ -174,17 +561,23 @@ export default {
     line-height: 2.5;
     font-weight: 600;
   }
+  .h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 2.3;
+  }
   .text {
     text-indent: 2rem;
     line-height: 1.5;
   }
   .title {
     text-align: center;
-    h1 {
-      font-size: 2rem;
-      color: #333;
-      margin-bottom:4rem;
-    }
+    // h1 {
+    //   font-size: 2rem;
+    //   color: #333;
+    //   margin-bottom:4rem;
+    // }
   }
 }
 </style>
