@@ -43,24 +43,28 @@
               ></textarea>
             </div>
           </div>
-          <div>
+          <div class="imgWapper">
             <span class="left">上传截图：</span>
             <div class="seimg">
-              <label for="imgfile">选择图片</label>
-              <input
-                type="file"
-                @change="uploadImg($event,'HF')"
-                ref="imgfile"
-                id="imgfile"
-                accept="image/png, image/jpeg, image/gif, image/jpg"
-              />
-              <span>不超过2M</span>
+              <div>
+                <label for="imgfile">选择图片</label>
+                <input
+                  type="file"
+                  @change="uploadImg($event,'HF')"
+                  ref="imgfile"
+                  id="imgfile"
+                  accept="image/png, image/jpeg, image/gif, image/jpg"
+                />
+                <span>不超过2M</span>
+              </div>
+              <div class="uploadedimg" v-show="upimg">
+                <img :src="imgBase64" alt  />
+              </div>
             </div>
           </div>
           <div>
             <label class="left" for>联系方式：</label>
             <div class="phone">
-              <img id="imgDome" src alt />
               <input v-model="number" type="number" placeholder="您的手机号或者QQ号" />
               <span class="mark">仅豆印工作人员可见，请保持您的联系方式畅通。</span>
             </div>
@@ -86,7 +90,8 @@ export default {
       },
       images: "",
       imgBase64: "",
-      title: "人本精神 服务至上"
+      title: "人本精神 服务至上",
+      upimg: false
     };
   },
   methods: {
@@ -132,9 +137,9 @@ export default {
     },
 
     async send(data) {
-      console.log(data);
-      let jsonRes = await axios.post("https://hdouji.com/upload/json", data);
-      // let jsonRes = await axios.post("http://localhost:8080/upload/json", data);
+      // console.log(data);
+      // let jsonRes = await axios.post("https://hdouji.com/upload/json", data);
+      let jsonRes = await axios.post("http://localhost:8080/upload/json", data);
       if (jsonRes.status !== 200) {
         alert("上传失败!");
         return;
@@ -144,17 +149,17 @@ export default {
     },
 
     uploadImg(e, type) {
-      // let file = e.target.files[0];
-      // if (!/\.(gif|jpg|jpeg|png|GIF|JPG|PNG|JPEG)$/.test(file.name)) {
-      //   this.alert(this.l.ST_TEXT5);
-      //   return;
-      // }
-      // this.images = new FormData(); //创建form对象
-      // this.images.append("file", file); //通过append向form对象添加数据
+      let _this = this; //转换this
 
-
-
-      console.log(e)
+      var imgFile = e.target.files[0]; // 获取图片文件
+      var fr = new FileReader(imgFile); // 读取文件
+      fr.readAsDataURL(imgFile);
+      fr.onload = function() {
+        // 图片读取完成后
+        _this.imgBase64 = fr.result; // 读取到的图片路径是Base64的
+        _this.upimg = true
+        console.log(_this.imgBase64);
+      };
     }
   }
 };
@@ -261,6 +266,16 @@ input[type="number"] {
       flex-direction: column;
       & > div:nth-child(2) {
         align-items: flex-start;
+        
+      }
+      .uploadedimg{
+        img{
+          width: 40%;
+          object-fit: cover;
+        }
+      }
+      & > div.imgWapper {
+        align-items: flex-start;
       }
       & > div {
         width: 100%;
@@ -290,6 +305,11 @@ input[type="number"] {
         }
 
         .seimg {
+          & > div:first-child{
+            height:3rem;
+            display: flex;
+    align-items: center;
+          }
           label {
             border: 1px solid #d7d7d7;
             padding: 0.4em 1em;
@@ -302,13 +322,13 @@ input[type="number"] {
           }
           span {
             margin-left: 0.3em;
-            font-size: .9rem;
+            font-size: 0.9rem;
             color: #666;
           }
         }
         .phone {
           .mark {
-            font-size: .9rem;
+            font-size: 0.9rem;
             color: #666;
           }
           input {

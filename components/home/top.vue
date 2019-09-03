@@ -14,7 +14,7 @@
         </div>
         <div class="QR-wapper">
           <div class="QRcode" v-for="(item, index) in qrcode" :key="index">
-            <div @mouseenter.native="enter(index)" @mouseleave.native="leave(index)">
+            <div @mouseenter="enter(index)" @mouseleave="leave(index)">
               <i :class="item.icon"></i>
               <span>{{item.name}}</span>
             </div>
@@ -38,13 +38,13 @@ export default {
         {
           icon: "iconfont icon-iconfontapple",
           name: "iPhone",
-          imgUrl: require("@/assets/img/12_12.jpg"),
+          imgUrl: 'https://hdjqrcode.oss-cn-beijing.aliyuncs.com/1567524788.png',
           flag: false
         },
         {
           icon: "iconfont icon-anzhuo",
           name: "Android",
-          imgUrl: require("@/assets/img/12_12.jpg"),
+          imgUrl: 'https://hdjqrcode.oss-cn-beijing.aliyuncs.com/1567524788.png',
           flag: false
         },
         // {
