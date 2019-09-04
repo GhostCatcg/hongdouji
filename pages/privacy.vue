@@ -498,7 +498,7 @@
         <p style="font-size:14px; line-height:115%; margin:24pt 0pt 0pt"><span
                 style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; text-decoration:none; text-transform:none">当您对本政策有任何疑问，可以发送邮件至</span><span
                 style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">【</span><span
-                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">hongdou</span><span
+                style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">douyin</span><span
                 style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">@</span><span
                 style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">hdouji</span><span
                 style="color:#333333; font-family:微软雅黑; font-size:14px; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none">.com
