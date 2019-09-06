@@ -30,6 +30,7 @@ export default {
 .default,
 .container {
   height: 100%;
+  min-width: 1280px;
 }
 .push,
 .footer {

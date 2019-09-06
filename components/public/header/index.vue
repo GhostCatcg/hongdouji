@@ -24,7 +24,7 @@
         right:0;
         left:0;
         top: 2rem;
-        width: 100%;
+        min-width: 1280px;
     }
 
 </style>
