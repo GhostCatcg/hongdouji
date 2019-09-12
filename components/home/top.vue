@@ -1,6 +1,7 @@
 <template>
   <div class="I-top">
     <el-row class="I-el-row">
+
       <el-col :span="10" align="right" class="I-home">
         <div>
           <img src="@/assets/img/home1.png" alt />
@@ -24,6 +25,7 @@
           </div>
         </div>
       </el-col>
+      
     </el-row>
   </div>
 </template>
@@ -47,12 +49,6 @@ export default {
           imgUrl: 'https://hdjqrcode.oss-cn-beijing.aliyuncs.com/1567524788.png',
           flag: false
         },
-        // {
-        //   icon: "iconfont icon-weixin",
-        //   name: "微信公众号",
-        //   imgUrl: require("@/assets/img/12_12.jpg"),
-        //   flag: false
-        // }
       ]
     };
   },
