@@ -9,8 +9,9 @@
 <script>
 import HHeader from "../components/public/header/index.vue";
 import HFooter from "../components/public/footer/index.vue";
+
 console.log(
-  "\n" + " %c GhostCat Blogs %c https://GhostCat.info " + "\n",
+  "\n" + " %c GhostCat GitHub %c http://gcat.me " + "\n",
   "color: #fadfa3; background: #030307; padding:5px 0;",
   "background: #fadfa3; padding:5px 0;"
 );

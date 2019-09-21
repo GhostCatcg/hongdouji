@@ -26,9 +26,10 @@ $ npm run prd
 
 ```
 
-PROJECT
-│   README.md            项目说明文件
+红豆记
 |
+│   README.md            项目说明文件
+|  
 |   layouts              布局目录，用于组织应用的布局组件，不可更改
 |
 |   pages                用于存放写的页面，我们主要的工作区域
@@ -65,44 +66,50 @@ PROJECT
 |
 |
 └───layouts              公共模板入口文件
-|
+|   |
 │   │   default.vue         默认入口文件
-|
+|   |
 │   │   error.vue           404错误页面
-|
+|   |
 │   │   none.vue            空白页面(用来写注册协议和隐私协议适配手机)
-|
+|   |
 │   │   ...  
 │     
 │     
 └───components           公用组件封装
-|
+|   |
 │   │   home                 首页组件
-|
+|   |
 │   │   public               首页组件封装
-|
+|   |
 │   │   ...
 │
 │
 └───page                 路由界面
 │   │
-│   │
-│   └───index                首页
-│       │   index.vue            首页文件
-│       │   ...
-│   │
-│   │   class             分类
+│   │   index             首页
 │   │          
-│   │   cart              购物车
-│   │          
-│   │   my                我的
+│   │   about             关于我们
 │   │
+│   └───news                 最新动态
+│       │   index.vue            动态主页
+│       │   _id.vue              动态详情页
+│       └─  ...
+│   │
+│   │     service.vue     意见反馈     
+│   │         
+│   │     edit.vue             markdown测试文件
+│   │                  
+│   │     privacy.vue     隐私协议
+│   │
+│   │     terms.vue       注册协议
 │   │
 │   │   ...
 │   │
 │   │
-└───XX
-    │   XXX.txt
+└───md                    从零开始nuxt开发记录文档
     .
     
 ```
+
+
