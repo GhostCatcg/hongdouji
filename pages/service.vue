@@ -1,7 +1,6 @@
 <template>
   <div class="service">
     <div class="content">
-      <!-- <p class="title">{{title}}</p> -->
       <div class="s-header">
         <div>
           <p>意见反馈</p>
@@ -58,7 +57,7 @@
                 <span>不超过2M</span>
               </div>
               <div class="uploadedimg" v-show="upimg">
-                <img :src="imgBase64" alt  />
+                <img :src="imgBase64" alt />
               </div>
             </div>
           </div>
@@ -298,6 +297,7 @@ input[type="number"] {
             font-size: 1.1em;
             color: #333;
             border: 1px solid #d7d7d7;
+            resize:none;
           }
           input {
             border: 1px solid #d7d7d7;
