@@ -6,14 +6,11 @@
 
 
 <script>
-
 export default {
-    
     validate ({ params }) {
     // 必须是number类型
     console.log(params)
-
     return /^\d+$/.test(params.id)
   }
-};  
+}
 </script>
