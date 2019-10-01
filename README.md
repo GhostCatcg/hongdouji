@@ -1,6 +1,6 @@
 # 基于nuxt + koa2 + mongodb构建的全栈开源项目，已使用pm2 + nginx部署到阿里云。
 
-## [红豆记官网](hdouji.com)
+## [红豆记官网](https://www.hdouji.com)
 
 ## 使用方法
 
