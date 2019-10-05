@@ -69,6 +69,7 @@ router.post("/upload/json", async (ctx, next) => {
 
 
 router.get("/admin1", async (ctx, next) => {
+    console.log("访问管理接口")
     var service = mongoose.model("service")
     await service.find((err, serviceScheam) => {
         ctx.response.body = serviceScheam

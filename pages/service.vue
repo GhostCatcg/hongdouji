@@ -79,6 +79,7 @@
 
 <script>
 import axios from "axios";
+import { Message } from "element-ui";
 export default {
   data() {
     return {
@@ -94,70 +95,86 @@ export default {
     };
   },
   methods: {
+    open() {
+      this.$message({
+        message: "恭喜你，这是一条成功消息",
+        type: "success"
+      });
+    },
     verify() {
       if (this.suggest === "") {
-        alert("请输入建议");
-        return;
-      }
-      if (this.number === "") {
-        alert("请输入手机号");
-        return;
-      }
-
-      if (window.FileReader) {
-        var fr = new FileReader();
-        // add your code here
+        this.$message({
+          message: "请输入建议",
+          type: "warning"
+        });
+        return false;
+      } else if (this.imgBase64) {
+        if (!window.FileReader) {
+          var fr = new FileReader();
+          // add your code here
+          this.$message({
+            message: "您的浏览器不支持上传图片！",
+            type: "warning"
+          });
+          return false;
+        }else{
+          return true
+        }
+      } else if (this.number === "") {
+        this.$message({
+          message: "请输入手机号",
+          type: "warning"
+        });
+        return false;
       } else {
-        alert("您的浏览器不支持上传图片！");
-        return;
+        return true;
       }
     },
+
     // 发送数据
     submitForm() {
       // 简单验证
-      this.verify();
+      if (!this.verify()) {
+        return;
+      }
 
       let _this = this; //转换this
 
-      var imgFile = this.$refs.imgfile.files[0]; // 获取图片文件
-      var fr = new FileReader(imgFile); // 读取文件
-      fr.readAsDataURL(imgFile);
-      fr.onload = function() {
-        // 图片读取完成后
-        _this.imgBase64 = fr.result; // 读取到的图片路径是Base64的
-        var jsonData = {
-          suggest: _this.suggest,
-          number: _this.number,
-          phone: _this.platform.type,
-          imgBase64: _this.imgBase64
-        };
-        _this.send(jsonData);
+      var jsonData = {
+        suggest: _this.suggest,
+        number: _this.number,
+        phone: _this.platform.type,
+        imgBase64: _this.imgBase64
       };
+      this.send(jsonData);
     },
 
     async send(data) {
-      // console.log(data);
-      // let jsonRes = await axios.post("https://hdouji.com/upload/json", data);
-      let jsonRes = await axios.post("http://localhost:8080/upload/json", data);
+      let jsonRes = await axios.post("/upload/json", data);
+      let _this = this;
       if (jsonRes.status !== 200) {
-        alert("上传失败!");
+        this.$message.error("上传失败");
         return;
       }
-      alert("上传成功！");
-      this.$router.push("/");
+      this.$message({
+        message: "上传成功",
+        type: "success"
+      });
+      setTimeout(() => {
+        this.$router.push("/");
+      }, 1000);
     },
 
     uploadImg(e, type) {
       let _this = this; //转换this
-
       var imgFile = e.target.files[0]; // 获取图片文件
       var fr = new FileReader(imgFile); // 读取文件
       fr.readAsDataURL(imgFile);
       fr.onload = function() {
         // 图片读取完成后
         _this.imgBase64 = fr.result; // 读取到的图片路径是Base64的
-        _this.upimg = true
-        console.log(_this.imgBase64);
+        _this.upimg = true;
+        // console.log(_this.imgBase64);
       };
     }
   }
@@ -265,10 +282,9 @@ input[type="number"] {
       flex-direction: column;
       & > div:nth-child(2) {
         align-items: flex-start;
-        
       }
-      .uploadedimg{
-        img{
+      .uploadedimg {
+        img {
           width: 40%;
           object-fit: cover;
         }
@@ -297,7 +313,7 @@ input[type="number"] {
             font-size: 1.1em;
             color: #333;
             border: 1px solid #d7d7d7;
-            resize:none;
+            resize: none;
           }
           input {
             border: 1px solid #d7d7d7;
@@ -305,10 +321,10 @@ input[type="number"] {
         }
 
         .seimg {
-          & > div:first-child{
-            height:3rem;
+          & > div:first-child {
+            height: 3rem;
             display: flex;
-    align-items: center;
+            align-items: center;
           }
           label {
             border: 1px solid #d7d7d7;

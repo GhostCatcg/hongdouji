@@ -33,8 +33,7 @@
 import axios from "axios";
 export default {
   mounted() {
-    axios.get(`https://hdouji.com/admin1`).then(res => {
-      console.log(res);
+    axios.get(`/admin1`).then(res => {
       for (var i in res.data) {
         console.log(res.data[i]);
         this.tableData.push({
