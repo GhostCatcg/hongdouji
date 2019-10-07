@@ -95,7 +95,7 @@ export default {
     };
   },
   methods: {
-    verify() {
+    verify() { 
       if (this.suggest === "") {
         this.$message({
           message: "请输入建议",
