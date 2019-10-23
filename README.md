@@ -1,4 +1,4 @@
-# 基于nuxt + koa2 + mongodb构建的全栈开源项目，已使用pm2 + nginx部署到阿里云。
+# 基于Nuxt(Vue) + koa2 + mongodb构建的全栈开源项目，已使用pm2 + nginx部署到阿里云。
 
 ## [红豆记官网](https://www.hdouji.com)
 
